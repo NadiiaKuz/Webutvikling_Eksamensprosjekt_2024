@@ -1,0 +1,111 @@
+@use 'fonts' as *;
+@use 'colors' as *;
+@use 'layout' as *;
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $mainFont;
+    padding: 0 20px;
+}
+
+#global-header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    form{
+        display: flex;
+        align-items: center;
+        border: 1px solid ;
+        border-radius: 20px;
+        padding: 0.1rem 0.5rem; 
+    }
+    
+    #search {
+        border: none;
+        outline: none;
+        padding: 4px;
+    }
+    
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.meny ul{
+    @include flex-list;
+
+    li.logo {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    li a{
+        text-decoration: none;
+        color: $black;
+    }
+}
+
+.item{
+    @include flex-list;
+
+    li{
+        font-size: 20px;
+    }
+
+    a{
+        text-decoration: none;
+        color: $black;
+    }
+}
+
+#bunn{
+    border-top: 2px solid $gray;
+    
+    .footer-logo{
+        text-decoration: none;
+        color: $black;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+}
+
+#bunn-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    section h3{
+        font-weight: 400;
+    }
+    
+    section ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    section ul li{
+        margin-bottom: 10px;
+    }
+
+    section ul li a {
+        text-decoration: none;
+        color: $black;
+    }
+
+    #media-icons{
+        display: flex;
+        align-items:center ;
+        justify-content: space-between;
+    }
+}
+
+
+

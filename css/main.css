@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 0 20px;
+}
+
+#global-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+#global-header form {
+  display: flex;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 0.1rem 0.5rem;
+}
+#global-header #search {
+  border: none;
+  outline: none;
+  padding: 4px;
+}
+#global-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.meny ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.meny ul li.logo {
+  font-size: 2rem;
+  padding: 1rem;
+}
+.meny ul li a {
+  text-decoration: none;
+  color: rgb(35, 35, 35);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.item li {
+  font-size: 20px;
+}
+.item a {
+  text-decoration: none;
+  color: rgb(35, 35, 35);
+}
+
+#bunn {
+  border-top: 2px solid rgb(128, 128, 128);
+}
+#bunn .footer-logo {
+  text-decoration: none;
+  color: rgb(35, 35, 35);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+#bunn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#bunn-container section h3 {
+  font-weight: 400;
+}
+#bunn-container section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#bunn-container section ul li {
+  margin-bottom: 10px;
+}
+#bunn-container section ul li a {
+  text-decoration: none;
+  color: rgb(35, 35, 35);
+}
+#bunn-container #media-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}/*# sourceMappingURL=main.css.map */
