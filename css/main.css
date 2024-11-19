@@ -171,12 +171,13 @@ body {
 #products {
   padding: 0;
   width: 100%;
+  margin-bottom: 3rem;
 }
 #products header {
   text-align: center;
   margin-bottom: 20px;
 }
-#products header h3 {
+#products header h2 {
   font-size: 2rem;
 }
 #products header p {
@@ -229,6 +230,7 @@ body {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 15px;
 }
 .product-card figure i:hover {
   background-color: rgb(235, 170, 170);
@@ -249,6 +251,62 @@ body {
 .product-card figcaption p {
   margin: 5px 0;
   font-size: 1rem;
+}
+
+#category {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+#category header {
+  margin-bottom: 20px;
+}
+#category header h2 {
+  font-size: 2rem;
+}
+#category header p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+#category #category-conteiner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "cat1 cat2 cat3" "cat4 cat4 cat3" "cat4 cat4 cat5";
+  gap: 1rem;
+}
+#category #category-conteiner article {
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+}
+#category #category-conteiner #category-1 {
+  background-image: url("../img/category1.jpg");
+  grid-area: cat1;
+  height: 250px;
+}
+#category #category-conteiner #category-2 {
+  background-image: url("../img/category2.jpg");
+  grid-area: cat2;
+}
+#category #category-conteiner #category-3 {
+  background-image: url("../img/category3.jpg");
+  grid-area: cat3;
+  height: 450px;
+}
+#category #category-conteiner #category-4 {
+  background-image: url("../img/category4.jpg");
+  grid-area: cat4;
+}
+#category #category-conteiner #category-5 {
+  background-image: url("../img/category5.jpg");
+  grid-area: cat5;
+  height: 250px;
 }
 
 #bunn {

@@ -181,12 +181,13 @@ body{
 #products{
     padding: 0;
     width: 100%;
+    margin-bottom: 3rem;
     
     header{
         text-align: center;
         margin-bottom: 20px;
 
-        h3{
+        h2{
             font-size: 2rem;
         }
 
@@ -245,6 +246,7 @@ body{
         display: block;
         width: 100%;
         height: auto;
+        border-radius: 15px;
     }
 
     i:hover{
@@ -270,6 +272,77 @@ body{
         font-size: 1rem;
     }
 }
+
+#category{
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    
+    header{
+        margin-bottom: 20px;
+
+        h2{
+            font-size: 2rem;
+        }
+
+        p{
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+    }
+
+    #category-conteiner{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "cat1 cat2 cat3"
+            "cat4 cat4 cat3"
+            "cat4 cat4 cat5";
+        gap: 1rem;
+
+        article{
+            color: $white;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.7;
+        }
+    
+        #category-1 {
+            background-image: url('../img/category1.jpg');
+            grid-area: cat1;
+            height: 250px;
+        }
+
+        #category-2 {
+            background-image: url('../img/category2.jpg');
+            grid-area: cat2;
+        }
+
+        #category-3 {
+            background-image: url('../img/category3.jpg');
+            grid-area: cat3;
+            height: 450px;
+        }
+
+        #category-4 {
+            background-image: url('../img/category4.jpg');
+            grid-area: cat4;
+        }
+
+        #category-5 {
+            background-image: url('../img/category5.jpg');
+            grid-area: cat5;
+            height: 250px;
+        }
+    }
+}
+
+
 
 #bunn{
     border-top: 2px solid $gray;
