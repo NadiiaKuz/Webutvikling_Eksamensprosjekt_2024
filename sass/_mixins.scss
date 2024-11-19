@@ -7,16 +7,3 @@
     margin: 0;
     padding: 0;
 }
-
-@mixin slide-style($bg-image, $text-color, $align-items, $text-align, $button-bg, $button-color) {
-    background-image: url($bg-image);
-    color: $text-color;
-    align-items: $align-items;
-    text-align: $text-align;
-
-    .btn {
-        background-color: $button-bg;
-        color: $button-color;
-    }
-}
-

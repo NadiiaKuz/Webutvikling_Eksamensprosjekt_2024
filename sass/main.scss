@@ -70,78 +70,115 @@ body{
 }
 
 .banner{
-    
     display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    gap: 20px;
-    width: 100%;
 
-    .slide {
-        flex: 0 0 100%;
-        height: 500px;
-        background-size: cover;
-        background-position: center;
-        border-radius: 25px;
-        scroll-snap-align: start;
+    .banner-slides{
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 20px;
+        gap: 20px;
+        width: 100%;
+    
+        article {
+            flex: 0 0 100%;
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 25px;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            max-width: 50%;
+        }
+        
+        p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            max-width: 50%;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #banner-1{
+            background-image: url("../img/banner1.jpg");
+            color: $black;
+            align-items: flex-end;
+            text-align: right;
+
+            .btn {
+                background-color: $white;
+                color: $black;
+            }
+        }
+
+        #banner-2{
+            background-image: url("../img/banner2.jpg");
+            color: $white;
+            align-items: flex-start;
+            text-align: left;
+
+            .btn {
+                background-color: $black;
+                color: $white;
+            }
+        }
+        
+        #banner-3{
+            background-image: url("../img/banner3.jpg");
+            color: $white;
+            align-items: flex-end;
+            text-align: right;
+
+            .btn {
+                background-color: $black;
+                color: $white;
+            }
+        }
     }
 
-    .slide h2 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-        max-width: 50%;
-    }
-    
-    .slide p {
+    .nav-prev,
+    .nav-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $background;
+        border: none;
+        color: $black;
         font-size: 1rem;
-        margin-bottom: 20px;
-        max-width: 50%;
-    }
-
-    .btn {
-        display: inline-block;
         padding: 1rem;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: bold;
-    }
+        cursor: pointer;
+        z-index: 10;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
 
-    #banner1{
-        @include slide-style(
-            "../img/banner1.jpg",
-            $black,
-            flex-end,
-            right,
-            $white,
-            $black
-        );
-    }
+        &.nav-prev {
+            left: 10px;
+        }
 
-    #banner2{
-        @include slide-style(
-            "../img/banner2.jpg",
-            $white,
-            flex-start,
-            left,
-            $black,
-            $white
-        );
-    }
-    
-    #banner3{
-        @include slide-style(
-            "../img/banner3.jpg",
-            $white,
-            flex-end,
-            right,
-            $black,
-            $white
-        );
-    }
+        &.nav-next {
+            right: 10px;
+        }
+    }    
 }
 
 #products{
@@ -294,16 +331,25 @@ body{
 
     }
 
-    .banner{
+    .banner {
         overflow: hidden;
         gap: 0;
+        
+        .banner-slides {
+            display: flex;
+        }
 
-        .slide{
+        article {
             display: none;
         }
 
-        #banner1{
+        #banner-1 {
             display: flex;
+        }
+
+        .nav-prev,
+        .nav-next {
+            display: none;
         }
     }
 
