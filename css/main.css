@@ -33,8 +33,7 @@ body {
   border: none;
   cursor: pointer;
 }
-
-.meny ul {
+#global-header .meny ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,15 +42,14 @@ body {
   margin: 0;
   padding: 0;
 }
-.meny ul li.logo {
+#global-header .meny ul li.logo {
   font-size: 2rem;
 }
-.meny ul li a {
+#global-header .meny ul li a {
   text-decoration: none;
   color: rgb(35, 35, 35);
 }
-
-.item {
+#global-header .item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,10 +58,10 @@ body {
   margin: 0;
   padding: 0;
 }
-.item li {
+#global-header .item li {
   font-size: 20px;
 }
-.item a {
+#global-header .item a {
   text-decoration: none;
   color: rgb(35, 35, 35);
 }
@@ -73,13 +71,42 @@ body {
   position: relative;
   align-items: center;
   width: 100%;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
+}
+.banner .nav-prev,
+.banner .nav-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(165, 165, 165, 0.8);
+  border: none;
+  color: rgb(35, 35, 35);
+  font-size: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+.banner .nav-prev.nav-prev,
+.banner .nav-next.nav-prev {
+  left: 10px;
+}
+.banner .nav-prev.nav-next,
+.banner .nav-next.nav-next {
+  right: 10px;
 }
 .banner .banner-slides {
   display: flex;
   gap: 20px;
   width: 100%;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+  margin-bottom: 2rem;
+  z-index: 1;
 }
 .banner .banner-slides article {
   flex: 0 0 100%;
@@ -140,33 +167,6 @@ body {
   background-color: rgb(35, 35, 35);
   color: #fff;
 }
-.banner .nav-prev,
-.banner .nav-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(200, 200, 200, 0.8);
-  border: none;
-  color: rgb(35, 35, 35);
-  font-size: 1rem;
-  padding: 1rem;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-}
-.banner .nav-prev.nav-prev,
-.banner .nav-next.nav-prev {
-  left: 10px;
-}
-.banner .nav-prev.nav-next,
-.banner .nav-next.nav-next {
-  right: 10px;
-}
 
 #products {
   padding: 0;
@@ -188,58 +188,65 @@ body {
   background: none;
   color: rgb(35, 35, 35);
   padding: 10px 20px;
-  border: 1px solid;
+  border: 1px solid rgba(165, 165, 165, 0.8);
   border-radius: 20px;
   cursor: pointer;
   font-size: 1rem;
+  margin-bottom: 2rem;
+}
+#products header #new-product {
+  background-color: rgb(35, 35, 35);
+  color: #fff;
+  border: 1px solid rgba(165, 165, 165, 0.8);
+}
+#products header #new-product:hover {
+  background-color: rgba(165, 165, 165, 0.8);
 }
 #products header button:hover {
-  background-color: rgba(200, 200, 200, 0.8);
+  background-color: rgba(165, 165, 165, 0.8);
+  color: #fff;
 }
-
-.product-container {
+#products .product-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 1rem;
   width: 100%;
 }
-
-.product-card {
+#products .product-container .product-card {
   border-radius: 15px;
   overflow: hidden;
   max-width: 100%;
+  margin-bottom: 2rem;
 }
-
-.product-card figure {
+#products .product-container .product-card figure {
   position: relative;
   margin: 0;
 }
-.product-card figure i {
+#products .product-container .product-card figure i {
   position: absolute;
   top: 10px;
   right: 10px;
   font-size: 1.5rem;
   color: #fff;
-  background: rgba(200, 200, 200, 0.8);
+  background: rgba(165, 165, 165, 0.8);
   padding: 8px;
   border-radius: 50%;
   cursor: pointer;
   z-index: 1;
 }
-.product-card figure img {
+#products .product-container .product-card figure img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 15px;
 }
-.product-card figure i:hover {
+#products .product-container .product-card figure i:hover {
   background-color: rgb(235, 170, 170);
 }
-
-.product-card figcaption {
+#products .product-container .product-card figcaption {
   text-align: left;
 }
-.product-card figcaption a {
+#products .product-container .product-card figcaption a {
   display: flex;
   justify-content: space-between;
   font-size: 1.2rem;
@@ -248,7 +255,7 @@ body {
   text-decoration: none;
   margin-bottom: 2rem;
 }
-.product-card figcaption p {
+#products .product-container .product-card figcaption p {
   margin: 5px 0;
   font-size: 1rem;
 }
@@ -349,7 +356,7 @@ body {
 }
 
 #bunn {
-  border-top: 2px solid rgb(128, 128, 128);
+  border-top: 2px solid rgb(125, 125, 125);
 }
 #bunn .footer-logo {
   text-decoration: none;
@@ -357,28 +364,27 @@ body {
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
-
-#bunn-container {
+#bunn #bunn-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-#bunn-container section h3 {
+#bunn #bunn-container section h3 {
   font-weight: 400;
 }
-#bunn-container section ul {
+#bunn #bunn-container section ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-#bunn-container section ul li {
+#bunn #bunn-container section ul li {
   margin-bottom: 10px;
 }
-#bunn-container section ul li a {
+#bunn #bunn-container section ul li a {
   text-decoration: none;
   color: rgb(35, 35, 35);
 }
-#bunn-container #media-icons {
+#bunn #bunn-container #media-icons {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -396,11 +402,11 @@ body {
     align-items: center;
   }
   .banner {
-    overflow: hidden;
     gap: 0;
   }
   .banner .banner-slides {
     display: flex;
+    overflow: hidden;
   }
   .banner article {
     display: none;
