@@ -105,10 +105,9 @@ body{
         display: flex;
         gap: 20px;
         width: 100%;
-        overflow: scroll;
+        overflow-x: scroll;
         scroll-snap-type: x mandatory;
         margin-bottom: 2rem;
-        z-index: 1;
     
         article {
             flex: 0 0 100%;
@@ -179,8 +178,6 @@ body{
             }
         }
     }
-
-    
 }
 
 #products{
@@ -233,63 +230,63 @@ body{
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         gap: 1rem;
         width: 100%;
-        
-        .product-card {
-            border-radius: 15px;
-            overflow: hidden;
-            max-width: 100%;
-            margin-bottom: 2rem;
-        }
-
-        .product-card figure {
-        position: relative;
-        margin: 0;
-        
-            i {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                font-size: 1.5rem;
-                color: $white;
-                background: $background;
-                padding: 8px;
-                border-radius: 50%;
-                cursor: pointer;
-                z-index: 1;
-            }
-            
-            img {
-                display: block;
-                width: 100%;
-                height: auto;
-                border-radius: 15px;
-            }
-
-            i:hover{
-                background-color: $bgHeard;
-            }
-        }
-
-        .product-card figcaption {
-            text-align: left;
-
-            a{
-                display: flex;
-                justify-content: space-between;
-                font-size: 1.2rem;
-                margin-bottom: 10px;
-                color: $black;
-                text-decoration: none;
-                margin-bottom: 2rem;
-            }
-
-            p {
-                margin: 5px 0;
-                font-size: 1rem;
-            }
-        }
     }    
 }
+
+.product-card {
+    border-radius: 15px;
+    max-width: 100%;
+    margin-bottom: 2rem;
+}
+
+.product-card figure {
+    position: relative;
+    margin: 0;
+
+        i {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            color: $white;
+            background: $background;
+            padding: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1;
+        }
+        
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        i:hover{
+            background-color: $bgHeard;
+        }
+}
+
+.product-card figcaption {
+    text-align: left;
+
+    a{
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: $black;
+        text-decoration: none;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        margin: 5px 0;
+        font-size: 1rem;
+    }
+}
+
 
 #category{
     padding: 0;
@@ -360,25 +357,30 @@ body{
     }
 }
 
-#rewiews{
+.content-container{
     padding: 0;
     width: 100%;
     margin-bottom: 20px;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
     
     header{
-        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
         h2{
-            text-align: left;
             font-size: 2rem;
-            
+        }
+
+        a{
+            text-decoration: none;
         }
     }
 
     #rewiw-container{
         display: flex;
         gap: 20px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
 
         article{
             flex: 0 0 300px;
@@ -409,6 +411,18 @@ body{
             font-size: 1.2rem;
             margin-bottom: 15px;
           }
+    }
+
+    #products-container{
+        display: flex;
+        gap: 20px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        
+        article{
+            flex: 0 0 300px;
+            scroll-snap-align: start;
+        }
     }
 }
 

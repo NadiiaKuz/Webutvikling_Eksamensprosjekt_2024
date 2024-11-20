@@ -103,10 +103,9 @@ body {
   display: flex;
   gap: 20px;
   width: 100%;
-  overflow: scroll;
+  overflow-x: scroll;
   scroll-snap-type: x mandatory;
   margin-bottom: 2rem;
-  z-index: 1;
 }
 .banner .banner-slides article {
   flex: 0 0 100%;
@@ -212,17 +211,18 @@ body {
   gap: 1rem;
   width: 100%;
 }
-#products .product-container .product-card {
+
+.product-card {
   border-radius: 15px;
-  overflow: hidden;
   max-width: 100%;
   margin-bottom: 2rem;
 }
-#products .product-container .product-card figure {
+
+.product-card figure {
   position: relative;
   margin: 0;
 }
-#products .product-container .product-card figure i {
+.product-card figure i {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -234,19 +234,20 @@ body {
   cursor: pointer;
   z-index: 1;
 }
-#products .product-container .product-card figure img {
+.product-card figure img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 15px;
 }
-#products .product-container .product-card figure i:hover {
+.product-card figure i:hover {
   background-color: rgb(235, 170, 170);
 }
-#products .product-container .product-card figcaption {
+
+.product-card figcaption {
   text-align: left;
 }
-#products .product-container .product-card figcaption a {
+.product-card figcaption a {
   display: flex;
   justify-content: space-between;
   font-size: 1.2rem;
@@ -255,7 +256,7 @@ body {
   text-decoration: none;
   margin-bottom: 2rem;
 }
-#products .product-container .product-card figcaption p {
+.product-card figcaption p {
   margin: 5px 0;
   font-size: 1rem;
 }
@@ -316,43 +317,60 @@ body {
   height: 250px;
 }
 
-#rewiews {
+.content-container {
   padding: 0;
   width: 100%;
   margin-bottom: 20px;
+}
+.content-container header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-container header h2 {
+  font-size: 2rem;
+}
+.content-container header a {
+  text-decoration: none;
+}
+.content-container #rewiw-container {
+  display: flex;
+  gap: 20px;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
 }
-#rewiews header h2 {
-  text-align: left;
-  font-size: 2rem;
-}
-#rewiews #rewiw-container {
-  display: flex;
-  gap: 20px;
-}
-#rewiews #rewiw-container article {
+.content-container #rewiw-container article {
   flex: 0 0 300px;
   border: 1px solid #ccc;
   border-radius: 15px;
   scroll-snap-align: start;
 }
-#rewiews #rewiw-container article figure img {
+.content-container #rewiw-container article figure img {
   border-radius: 50px;
 }
-#rewiews #rewiw-container article figcaption h4 {
+.content-container #rewiw-container article figcaption h4 {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 5px;
 }
-#rewiews #rewiw-container article figcaption p {
+.content-container #rewiw-container article figcaption p {
   font-size: 1rem;
   margin: 0;
   margin-bottom: 10px;
 }
-#rewiews #rewiw-container p:first-of-type {
+.content-container #rewiw-container p:first-of-type {
   font-size: 1.2rem;
   margin-bottom: 15px;
+}
+.content-container #products-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+.content-container #products-container article {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
 }
 
 #bunn {

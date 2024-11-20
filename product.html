@@ -42,7 +42,260 @@
             </ul>
         </header>
         <main>
+            <nav>
+                <ul class="breadcrumb">
+                    <li><a href="#">Hjem</a></li>
+                    <i class="fa-solid fa-angle-right"></i>
+                    <li><a href="#">Kategori</a></li>
+                    <i class="fa-solid fa-angle-right"></i>
+                    <li><strong>Produktnavn</strong></li>
+                  </ul>
+            </nav>
+            <section id="product-pictures-left">
+                <img src="img/product-dress.png" alt="Vintage dress" id="active-img">
+                <img src="img/product-dress.png" alt="Vintage dress">
+                <img src="img/product-dress.png" alt="Vintage dress">
+                <img src="img/product-dress.png" alt="Vintage dress">
+            </section>
+            <section id="product-information-right">
+                <h2>Produktnavn</h2>
+                <a href="#">MERKENAVN</a>
+                <p>5 195 kr inkl. mva.</p>
+                <p>Farge: <strong>black</strong></p>
 
+                <form>
+                    <label for="size-select">Velg størrelse:</label>
+                    <select id="size-select" name="size">
+                        <option value="Velg størrelse">Velg størrelse</option>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <button type="button" id="add-to-cart">Legg i handlekurv</button>
+                    <button type="button" id="wishlist" aria-label="Legg til i ønskeliste"><i class="fa-regular fa-heart"></i></button>
+                </form>
+
+                <details>
+                    <summary>Materiale og vedlikehold <i class="fa-solid fa-plus"></i></summary>
+                    <ul>
+                        <li>Overmateriale: 95% viskose, 5% elastan</li>
+                        <li>Materiale ermer: 100% polyester</li>
+                        <li>Materiale: Jersey</li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>Produktdetaljer <i class="fa-solid fa-plus"></i></summary>
+                    <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks, and seasonal special events.</p>
+                </details>
+
+                <details>
+                    <summary>Størrelsestabell <i class="fa-solid fa-plus"></i></summary>
+                    <p>Sjekk hvordan din vanlige størrelse konverterer til andre størrelser i vår størrelsesguide. Husk at dette kun er en generell guide og at størrelsene kan variere i forhold til merke og modell.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>EU</th>
+                                <th>INT</th>
+                                <th>BRYSTVIDDE</th>
+                                <th>LIVVIDDE</th>
+                                <th>HOFTEMÅL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>32</td>
+                                <td>XXS</td>
+                                <td>76</td>
+                                <td>63</td>
+                                <td>85</td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td>XS</td>
+                                <td>80</td>
+                                <td>66</td>
+                                <td>89</td>
+                            </tr>
+                            <tr>
+                                <td>36</td>
+                                <td>S</td>
+                                <td>84</td>
+                                <td>69</td>
+                                <td>93</td>
+                            </tr>
+                            <tr>
+                                <td>38</td>
+                                <td>M</td>
+                                <td>88</td>
+                                <td>72</td>
+                                <td>97</td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>L</td>
+                                <td>92</td>
+                                <td>76</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>42</td>
+                                <td>XL</td>
+                                <td>96</td>
+                                <td>80</td>
+                                <td>103</td>
+                            </tr>
+                            <tr>
+                                <td>44</td>
+                                <td>XXL</td>
+                                <td>100</td>
+                                <td>85</td>
+                                <td>106</td>
+                            </tr>
+                            <tr>
+                                <td>46</td>
+                                <td>3XL</td>
+                                <td>104</td>
+                                <td>90</td>
+                                <td>109</td>
+                            </tr>
+                            <tr>
+                                <td>48</td>
+                                <td>4XL</td>
+                                <td>108</td>
+                                <td>95</td>
+                                <td>114</td>
+                            </tr>
+                            <tr>
+                                <td>50</td>
+                                <td>5XL</td>
+                                <td>112</td>
+                                <td>100</td>
+                                <td>119</td>
+                            </tr>
+                            <tr>
+                                <td>52</td>
+                                <td>6XL</td>
+                                <td>116</td>
+                                <td>105</td>
+                                <td>124</td>
+                            </tr>
+                            <tr>
+                                <td>54</td>
+                                <td>7XL</td>
+                                <td>120</td>
+                                <td>112.5</td>
+                                <td>129</td>
+                            </tr>
+                            <tr>
+                                <td>56</td>
+                                <td>8XL</td>
+                                <td>124</td>
+                                <td>120</td>
+                                <td>134</td>
+                            </tr>
+                            <tr>
+                                <td>58</td>
+                                <td>9XL</td>
+                                <td>129</td>
+                                <td>126</td>
+                                <td>140</td>
+                            </tr>
+                            <tr>
+                                <td>60</td>
+                                <td>10XL</td>
+                                <td>135.5</td>
+                                <td>135.5</td>
+                                <td>148</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+
+                <details>
+                    <summary>Anmeldelser ★★★★☆ 32</summary>
+                    <article>
+                        <header>
+                            <h3>Rober Labrador</h3>
+                            <time datetime="2024-10-02">2024-10-02</time>
+                        </header>
+                        <p>★★★☆☆</p>
+                        <p>
+                            Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod.
+                        </p>
+                    </article>
+                </details>
+            </section>
+            <section class="content-container">
+                <header>
+                    <h2>Lignende produkter</h2>
+                    <a href="#">Se flere lignende produkter <i class="fa-solid fa-arrow-right"></i></a>
+                </header>
+                <div id="products-container">
+                    <article class="product-card">
+                        <figure>
+                            <i class="fa-regular fa-heart"></i>
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt">
+                            <figcaption>
+                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
+                                <p>★★★★☆ 842 Reviews</p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="product-card">
+                        <figure>
+                            <i class="fa-regular fa-heart"></i>
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt">
+                            <figcaption>
+                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
+                                <p>★★★★☆ 842 Reviews</p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="product-card">
+                        <figure>
+                            <i class="fa-regular fa-heart"></i>
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt">
+                            <figcaption>
+                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
+                                <p>★★★★☆ 842 Reviews</p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="product-card">
+                        <figure>
+                            <i class="fa-regular fa-heart"></i>
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt">
+                            <figcaption>
+                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
+                                <p>★★★★☆ 842 Reviews</p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="product-card">
+                        <figure>
+                            <i class="fa-regular fa-heart"></i>
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt">
+                            <figcaption>
+                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
+                                <p>★★★★☆ 842 Reviews</p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="product-card">
+                        <figure>
+                            <i class="fa-regular fa-heart"></i>
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt">
+                            <figcaption>
+                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
+                                <p>★★★★☆ 842 Reviews</p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </div>
+            </section>
         </main>
         <footer id="bunn">
             <a href="index.html" class="footer-logo"><h3>Logo</h3></a>
