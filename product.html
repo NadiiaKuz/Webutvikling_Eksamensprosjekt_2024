@@ -41,9 +41,9 @@
                 </li>
             </ul>
         </header>
-        <main>
-            <nav>
-                <ul class="breadcrumb">
+        <main id="product-page-container">
+            <nav id="breadcrumb">
+                <ul>
                     <li><a href="#">Hjem</a></li>
                     <li><i class="fa-solid fa-angle-right"></i></li>
                     <li><a href="#">Kategori</a></li>
@@ -52,10 +52,10 @@
                   </ul>
             </nav>
             <section id="product-pictures-left">
+                <img src="img/product-dress.png" alt="Vintage dress" class="miniature">
+                <img src="img/product-dress.png" alt="Vintage dress" class="miniature">
+                <img src="img/product-dress.png" alt="Vintage dress" class="miniature">
                 <img src="img/product-dress.png" alt="Vintage dress" id="active-img">
-                <img src="img/product-dress.png" alt="Vintage dress">
-                <img src="img/product-dress.png" alt="Vintage dress">
-                <img src="img/product-dress.png" alt="Vintage dress">
             </section>
             <section id="product-information-right">
                 <h2>Produktnavn</h2>
@@ -215,10 +215,19 @@
                 </details>
 
                 <details>
-                    <summary>Anmeldelser ★★★★☆ 32</summary>
+                    <summary>Anmeldelser 
+                        <ul class="rating">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                            <li>32</li>
+                        </ul>
+                    </summary>
                     <article>
                         <header>
-                            <h3>Rober Labrador</h3>
+                            <h3>Robert Labrador</h3>
                             <time datetime="2024-10-02">2024-10-02</time>
                         </header>
                         <p>★★★☆☆</p>
