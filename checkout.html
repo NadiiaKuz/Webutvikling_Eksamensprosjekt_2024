@@ -173,60 +173,48 @@
                 </form>
             </section>
             
-            <section id="delivery">
+            <section id="delivery-option">
                 <header class="title">
                     <h2>3. LEVERING</h2>
                 </header>
-                <form method="POST">
-                    <fieldset>
-                        <legend>LEVERINGSVALG</legend>
-                        <label>
+                <h3>LEVERINGSVALG</h3>
+                <article class="option">
+                    <label>
+                        <header>
                             <input type="radio" name="delivery" value="express-home" required>
-                            <article>
-                                <header>
-                                    <h3>Express Hjemlevering</h3>
-                                    <p>3-4 Virkedager</p>
-                                </header>
-                                <p>
-                                    bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag. 
-                                    *For levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.
-                                </p>
-                                <footer>
-                                    <p>59 kr <i class="fa-solid fa-truck-fast"></i></p>
-                                </footer>
-                            </article>
-                        </label>
-                        <label>
-                            <input type="radio" name="delivery" value="express-pickup">
-                            <article>
-                                <header>
-                                    <h3>Ekspress Pakke til utleveringssted</h3>
-                                    <p>1-3 Virkedager</p>
-                                </header>
-                                <footer>
-                                    <p>59 kr <i class="fa-brands fa-dhl"></i></p>
-                                </footer>
-                            </article>
-                        </label>
-                        
-                        <label>
-                            <input type="radio" name="delivery" value="standard-home">
-                            <article>
-                                <header>
-                                    <h3>Standard Hjemlevering</h3>
-                                    <p>5-8 Virkedager</p>
-                                </header>
-                                <p>
-                                    Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.
-                                </p>
-                                <footer>
-                                    <p>Gratis <i class="fa-solid fa-box"></i></p>
-                                </footer>
-                            </article>
-                        </label>
-                        
-                    </fieldset>
-                </form>
+                            <h4>Express Hjemlevering</h4>
+                            <p>59 kr <i class="fa-solid fa-truck-fast"></i></p>
+                        </header>
+                        <p class="days">3-4 Virkedager</p>
+                        <p>
+                            bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag. 
+                            *For levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.
+                        </p>
+                    </label>
+                </article>
+                <article class="option">
+                    <label>
+                        <header>
+                            <input type="radio" name="delivery" value="express-home">
+                            <h4>Ekspress Pakke til utleveringssted</h4>
+                            <p>59 kr <i class="fa-brands fa-dhl"></i></p>
+                        </header>
+                        <p class="days">1-3 Virkedager</p>
+                    </label>
+                </article>
+                <article class="option">
+                    <label>
+                        <header>
+                            <input type="radio" name="delivery" value="express-home" required>
+                            <h4>Standard Hjemlevering</h4>
+                            <p>Gratis <i class="fa-solid fa-box"></i></p>
+                        </header>
+                        <p class="days">5-8 Virkedager</p>
+                        <p>
+                            Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.
+                        </p>
+                    </label>
+                </article>
             </section>
             
             <section id="payment">
@@ -234,45 +222,41 @@
                     <h2>4. BETALING</h2>
                 </header>
                 <form method="POST">
-                    <fieldset>
+                    <fieldset id="payment-card">
                         <legend>BETAL MED KORT <i class="fa-solid fa-credit-card"></i></legend>
                         <label id="card-number">
                             Kortnummer
-                            <input type="text" name="card-number" placeholder="342342****4435" required>
+                            <input type="text" name="card-number" placeholder="342342****4435" pattern="\d*" maxlength="16" required>
                         </label>
                         <label id="expiry-date">
                             Utløpsdato
-                            <input type="text" name="expiry-date" placeholder="mm / dd / yyyy" required>
-                            <i class="fa-regular fa-calendar"></i>
+                            <input type="date" name="expiry-date" required>
                         </label>
                         <label id="cvc">
                             CVC/CVV
-                            <input type="text" name="cvc" placeholder="CVC/CVV" required>
+                            <input type="text" name="cvc" placeholder="CVC/CVV" pattern="\d*" maxlength="3" required>
                         </label>
                     </fieldset>
+                </form>
 
-                    <section>
-                        <p>Å betale inkl. mva.</p>
-                        <strong>1 199 kr</strong>
-                    </section>
-                    
-                    <footer>
-                        <button type="submit">Fullfør kjøp</button>
-                    </footer>
-                    <p>
-                        Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. 
-                        Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.
-                    </p>
-                    <fieldset>
-                        <label>
-                            <input type="checkbox" name="newsletter">
-                            Ja takk! Send nyhetsbrev til meg.
-                        </label>
-                        <label>
-                            <input type="checkbox" name="sms-offers">
-                            Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.
-                        </label>
-                    </fieldset>
+                <section id="price">
+                    <p>Å betale inkl. mva.</p>
+                    <strong>1 199 kr</strong>
+                </section>
+                <button type="submit">Fullfør kjøp</button>
+                <p>
+                    Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. 
+                    Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.
+                </p>
+                <form method="post" id="check">
+                    <label>
+                        <input type="checkbox" name="newsletter">
+                        Ja takk! Send nyhetsbrev til meg.
+                    </label>
+                    <label>
+                        <input type="checkbox" name="sms-offers">
+                        Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.
+                    </label>
                 </form>
             </section>
         </main>

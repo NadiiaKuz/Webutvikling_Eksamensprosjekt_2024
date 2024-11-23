@@ -1,0 +1,127 @@
+@mixin mobile-size(){  
+    #global-header{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .meny ul{
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .banner {
+        gap: 0;
+        
+        .banner-slides {
+            display: flex;
+            overflow: hidden;
+        }
+
+        article {
+            display: none;
+        }
+
+        #banner-1 {
+            display: flex;
+        }
+
+        .nav-prev,
+        .nav-next {
+            display: none;
+        }
+    }
+
+    .product-container{
+        grid-template-columns: 1fr;
+
+        .product-card{
+            max-width: none;
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    #category {
+        #category-conteiner {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                "cat1"
+                "cat2"
+                "cat3"
+                "cat4"
+                "cat5";
+        
+            article{
+                height: auto;
+            }
+
+            #category-1 {
+                height: 150px;
+            }
+        
+            #category-2 {
+                height: 150px;
+            }
+        
+            #category-3 {
+                height: 150px;
+            }
+        
+            #category-4 {
+                height: 150px;
+            }
+        
+            #category-5 {
+                height: 150px;
+            }
+        }
+    }
+
+    #product-page-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #shopping-bag{
+        padding: 1rem;
+
+
+        article{
+            display: grid;
+            grid-template-columns: 1fr;
+            
+            grid-template-areas:
+                "img"
+                "info"
+                "form"
+                "footer";
+
+            gap: 1rem;
+            width: 100%;
+            margin-bottom: 2rem;
+
+            footer{
+                justify-self: start;
+                flex-direction: row;
+            }
+        }
+    }
+
+    #buyer-information{
+        padding: 1rem;
+    }
+
+    #delivery-option{
+        padding: 1rem;
+    }
+
+    #payment{
+        padding: 1rem;
+    }
+}
