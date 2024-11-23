@@ -77,7 +77,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(165, 165, 165, 0.8);
+  background-color: rgb(100, 100, 100);
   border: none;
   color: rgb(35, 35, 35);
   font-size: 1rem;
@@ -187,7 +187,7 @@ body {
   background: none;
   color: rgb(35, 35, 35);
   padding: 10px 20px;
-  border: 1px solid rgba(165, 165, 165, 0.8);
+  border: 1px solid rgb(100, 100, 100);
   border-radius: 20px;
   cursor: pointer;
   font-size: 0.9rem;
@@ -196,13 +196,13 @@ body {
 #products header #new-product {
   background-color: rgb(35, 35, 35);
   color: #fff;
-  border: 1px solid rgba(165, 165, 165, 0.8);
+  border: 1px solid rgb(100, 100, 100);
 }
 #products header #new-product:hover {
-  background-color: rgba(165, 165, 165, 0.8);
+  background-color: rgb(100, 100, 100);
 }
 #products header button:hover {
-  background-color: rgba(165, 165, 165, 0.8);
+  background-color: rgb(100, 100, 100);
   color: #fff;
 }
 #products .product-container {
@@ -227,7 +227,7 @@ body {
   right: 10px;
   font-size: 1.5rem;
   color: #fff;
-  background: rgba(165, 165, 165, 0.8);
+  background: rgb(100, 100, 100);
   padding: 8px;
   border-radius: 50%;
   cursor: pointer;
@@ -389,21 +389,21 @@ body {
   margin-bottom: 1rem;
 }
 #product-page-container #product-information-right form #add-to-cart {
-  background-color: rgb(35, 35, 35);
+  background-color: rgb(50, 50, 50);
   color: #fff;
-  border: 1px solid rgba(165, 165, 165, 0.8);
   padding: 0.5rem;
   font-size: 1rem;
+  border: 1px solid rgb(100, 100, 100);
   cursor: pointer;
   width: 91%;
 }
 #product-page-container #product-information-right form #add-to-cart:hover {
-  background-color: rgba(165, 165, 165, 0.8);
+  background-color: rgb(100, 100, 100);
 }
 #product-page-container #product-information-right form #wishlist {
   background-color: transparent;
   color: rgb(35, 35, 35);
-  border: 2px solid rgba(165, 165, 165, 0.8);
+  border: 2px solid rgb(100, 100, 100);
   padding: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
@@ -523,17 +523,21 @@ body {
 }
 
 .title {
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin: 3rem 0;
 }
 .title h2 {
   font-size: 1.6rem;
 }
 
+#checkout-main section {
+  margin-bottom: 1rem;
+}
+
 #shopping-bag {
   border: 1px solid rgba(200, 200, 200, 0.7);
   width: 100%;
-  padding: 0 10rem;
+  align-items: center;
+  padding: 0 15rem;
 }
 #shopping-bag article {
   display: grid;
@@ -593,6 +597,80 @@ body {
 }
 #shopping-bag article footer button :hover {
   color: rgb(225, 160, 160);
+}
+
+#buyer-information {
+  border: 1px solid rgba(200, 200, 200, 0.7);
+  width: 100%;
+  align-items: center;
+  padding: 0 15rem;
+}
+#buyer-information form {
+  gap: 2rem;
+}
+#buyer-information form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 4rem;
+}
+#buyer-information form fieldset legend {
+  font-size: 1rem;
+  padding: 0;
+}
+#buyer-information form fieldset label {
+  font-size: 1rem;
+  color: rgb(50, 50, 50);
+}
+#buyer-information form fieldset input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid rgba(200, 200, 200, 0.7);
+  width: 100%;
+}
+#buyer-information form #address {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 0 0.5rem;
+  grid-template-areas: "fornavn etternavn" "gateadresse gateadresse" "postnummer poststed";
+}
+#buyer-information form #address #fornavn {
+  grid-area: fornavn;
+}
+#buyer-information form #address #etternavn {
+  grid-area: etternavn;
+}
+#buyer-information form #address #gateadresse {
+  grid-area: gateadresse;
+}
+#buyer-information form #address #postnummer {
+  grid-area: postnummer;
+}
+#buyer-information form #address #poststed {
+  grid-area: poststed;
+}
+#buyer-information form footer {
+  margin-top: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+#buyer-information form footer button {
+  background-color: rgb(50, 50, 50);
+  color: #fff;
+  border: 1px solid rgb(100, 100, 100);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+#buyer-information form footer button:hover {
+  background-color: #555;
+}
+#buyer-information form footer a {
+  font-size: 1rem;
+  color: rgb(0, 0, 190);
 }
 
 #bunn {
@@ -707,7 +785,9 @@ body {
     width: 100%;
   }
   #shopping-bag {
-    padding: 2rem;
+    width: 100%;
+    align-items: center;
+    padding: 0 2rem;
   }
   #shopping-bag article {
     display: flex;
@@ -717,7 +797,6 @@ body {
     grid-template-areas: "img" "info" "form" "footer";
     gap: 1rem;
     width: 100%;
-    align-items: center;
     margin-bottom: 2rem;
   }
 }/*# sourceMappingURL=main.css.map */

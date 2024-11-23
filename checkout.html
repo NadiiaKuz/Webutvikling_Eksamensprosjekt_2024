@@ -41,7 +41,7 @@
                 </li>
             </ul>
         </header>
-        <main>
+        <main id="checkout-main">
             <header id="kasse">
                 <a href="#"><i class="fa-solid fa-arrow-left"></i> Fortsett å handle</i></a>
                 <h2>Kasse</h2>
@@ -131,30 +131,40 @@
                     <h2>2. DINE OPPLYSNINGER</h2>
                 </header>
                 <form method="post">
-                    <fieldset>
+                    <fieldset id="address">
                         <legend>Leveringsadresse</legend>
-                        <label for="fornavn">Fornavn</label>
-                        <input type="text" id="fornavn" name="fornavn" placeholder="Nora*" maxlength="45" required>
-                        
-                        <label for="etternavn">Etternavn</label>
-                        <input type="text" id="etternavn" name="etternavn" placeholder="Nordman*" maxlength="45" required>
-                        
-                        <label for="gateadresse">Gateadresse</label>
-                        <input type="text" id="gateadresse" name="gateadresse" placeholder="BRA veien 4*" required>
-                        
-                        <label for="postnummer">Postnummer</label>
-                        <input type="number" id="postnummer" name="postnummer" placeholder="1752*" pattern="\d{4}" min="1" required>
-                        
-                        <label for="poststed">Poststed</label>
-                        <input type="text" id="poststed" name="poststed" placeholder="Halden*" required>
+                        <label id="fornavn">
+                            Fornavn
+                            <input type="text" name="fornavn" placeholder="Nora*" maxlength="45" required>
+                        </label>
+                        <label id="etternavn">
+                            Etternavn
+                            <input type="text" name="etternavn" placeholder="Nordman*" maxlength="45" required>
+                        </label>
+                        <label id="gateadresse">
+                            Gateadresse
+                            <input type="text" name="gateadresse" placeholder="BRA veien 4*" required>
+                        </label>
+                        <label id="postnummer">
+                            Postnummer
+                            <input type="number" name="postnummer" placeholder="1752*" pattern="\d{4}" min="1" required>
+                        </label>
+                        <label id="poststed">
+                            Poststed
+                            <input type="text" name="poststed" placeholder="Halden*" required>
+                        </label>  
                     </fieldset>
-                    <fieldset>
+
+                    <fieldset id="contact-info">
                         <legend>Kontaktinformasjon</legend>
-                        <label for="email">E-post</label>
-                        <input type="email" id="email" name="email" placeholder="Noranordman@hiof.no.*" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
-                        
-                        <label for="telefon">Telefon</label>
-                        <input type="tel" id="telefon" name="telefon" placeholder="+4749***018" pattern="\+47\d{8}" required>
+                        <label>
+                            E-post
+                            <input type="email" id="email" name="email" placeholder="Noranordman@hiof.no.*" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                        </label>
+                        <label>
+                            Telefon
+                            <input type="tel" id="telefon" name="telefon" placeholder="+4749***018" pattern="\+47\d{8}" required>
+                        </label>
                     </fieldset>
                     <footer>
                         <button type="submit">Lagre</button>
@@ -167,7 +177,7 @@
                 <header class="title">
                     <h2>3. LEVERING</h2>
                 </header>
-                <form action="/submit-delivery" method="POST">
+                <form method="POST">
                     <fieldset>
                         <legend>LEVERINGSVALG</legend>
                         <label>
@@ -223,26 +233,29 @@
                 <header class="title">
                     <h2>4. BETALING</h2>
                 </header>
-                <form action="/submit-payment" method="POST">
+                <form method="POST">
                     <fieldset>
                         <legend>BETAL MED KORT <i class="fa-solid fa-credit-card"></i></legend>
-                        
-                        <label for="card-number">Kortnummer</label>
-                        <input type="text" id="card-number" name="card-number" placeholder="342342****4435" required>
-                        
-                        <section>
-                            <label for="expiry-date">Utløpsdato</label>
-                            <input type="text" id="expiry-date" name="expiry-date" placeholder="mm / dd / yyyy" required>
+                        <label id="card-number">
+                            Kortnummer
+                            <input type="text" name="card-number" placeholder="342342****4435" required>
+                        </label>
+                        <label id="expiry-date">
+                            Utløpsdato
+                            <input type="text" name="expiry-date" placeholder="mm / dd / yyyy" required>
                             <i class="fa-regular fa-calendar"></i>
-                            
-                            <label for="cvc">CVC/CVV</label>
-                            <input type="text" id="cvc" name="cvc" placeholder="CVC/CVV" required>
-                        </section>
+                        </label>
+                        <label id="cvc">
+                            CVC/CVV
+                            <input type="text" name="cvc" placeholder="CVC/CVV" required>
+                        </label>
                     </fieldset>
+
                     <section>
                         <p>Å betale inkl. mva.</p>
                         <strong>1 199 kr</strong>
                     </section>
+                    
                     <footer>
                         <button type="submit">Fullfør kjøp</button>
                     </footer>

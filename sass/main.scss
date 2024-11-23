@@ -446,18 +446,17 @@ body{
             }
     
             #add-to-cart {
-                background-color: $black;
+                background-color: $darcgray;
                 color: $white;
-                border: 1px solid $background;
                 padding: 0.5rem;
                 font-size: 1rem;
+                border: 1px solid $background;
                 cursor: pointer;
                 width: 91%;
-
-            }
-
-            #add-to-cart:hover{
-                background-color: $background;
+                
+                &:hover{
+                    background-color: $background;
+                }
             }
             
             #wishlist {
@@ -605,20 +604,22 @@ body{
 }
 
 .title{
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    margin: 3rem 0;
     
     h2{
         font-size: 1.6rem;
     }
 }
 
-#shopping-bag{
-    border: 1px solid $border;
-    width: 100%;
-    padding: 0 10rem;
+#checkout-main{
+    section{
+        margin-bottom: 1rem;
+    }
+}
 
-    
+#shopping-bag{
+    @include checkout-border;
+
     article {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -631,7 +632,6 @@ body{
         gap: 1rem;
         width: 100%;
         align-items: center;
-
         margin-bottom: 2rem;
 
     
@@ -689,6 +689,96 @@ body{
                 :hover{
                     color: $bgHeard;
                 }
+            }
+        }
+    }
+}
+
+#buyer-information{
+    @include checkout-border;
+
+    form{
+        gap: 2rem;
+
+        fieldset{
+            border: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 4rem;
+
+            legend{
+                font-size: 1rem;
+                padding: 0;
+            }
+
+            label {
+                font-size: 1rem;
+                color: $darcgray;
+            }
+    
+            input {
+                padding: 0.5rem;
+                font-size: 1rem;
+                border: 1px solid $border;
+                width: 100%;
+            }
+        }
+
+        #address {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 0 0.5rem;
+
+            grid-template-areas:
+                "fornavn etternavn"
+                "gateadresse gateadresse"
+                "postnummer poststed";
+
+            #fornavn {
+                grid-area: fornavn;
+            }
+
+            #etternavn {
+                grid-area: etternavn;
+            }
+
+            #gateadresse {
+                grid-area: gateadresse;
+            }
+
+            #postnummer {
+                grid-area: postnummer;
+            }
+
+            #poststed {
+                grid-area: poststed;
+            }
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+
+            button {
+                background-color: $darcgray;
+                color: $white;
+                border: 1px solid $background;
+                padding: 0.5rem;
+                margin-bottom: 1rem;
+                font-size: 1rem;
+                cursor: pointer;
+                width: 100%;
+
+                &:hover {
+                    background-color: #555;
+                }
+            }
+
+            a {
+                font-size: 1rem;
+                color: $blue;
             }
         }
     }
@@ -848,7 +938,11 @@ body{
     }
     
     #shopping-bag{
-        padding: 2rem;
+        width: 100%;
+        align-items: center;
+        padding: 0 2rem;
+
+
         article{
             display: flex;
             display: grid;
@@ -863,7 +957,6 @@ body{
 
             gap: 1rem;
             width: 100%;
-            align-items: center;
             margin-bottom: 2rem;
         }
     }

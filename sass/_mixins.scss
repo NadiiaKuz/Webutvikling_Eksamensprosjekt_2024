@@ -1,3 +1,5 @@
+@use 'colors' as *;
+
 @mixin flex-list(){
     display: flex;
     align-items: center;
@@ -6,4 +8,11 @@
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+@mixin checkout-border(){
+    border: 1px solid $border;
+    width: 100%;
+    align-items: center;
+    padding: 0 15rem;
 }
