@@ -14,7 +14,7 @@
     border: 1px solid $border;
     width: 100%;
     align-items: center;
-    padding: 0 15rem;
+    padding: 0 1rem;
 }
 
 @mixin checkout-button-style(){
@@ -22,7 +22,7 @@
     color: $white;
     border: 1px solid $background;
     padding: 0.5rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     font-size: 1rem;
     cursor: pointer;
     width: 100%;

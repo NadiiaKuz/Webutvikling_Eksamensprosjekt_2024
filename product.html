@@ -25,10 +25,10 @@
             <nav class="meny">
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
-                    <li><a href="index.html#products">Produkter</a></li>
+                    <li><a href="index.html#popular-products">Produkter</a></li>
                     <li class="logo"><a href="index.html"><h1>Logo</h1></a></li>
-                    <li><a href="index.html#category">Kategorier</a></li>
-                    <li><a href="#bunn">Kontakt oss</a></li>
+                    <li><a href="index.html#category-conteiner">Kategorier</a></li>
+                    <li><a href="#contacts">Kontakt oss</a></li>
                 </ul>
             </nav>
             <ul class="item">
@@ -73,8 +73,10 @@
                         <option value="L">L</option>
                         <option value="XL">XL</option>
                     </select>
-                    <button type="button" id="add-to-cart">Legg i handlekurv</button>
-                    <button type="button" id="wishlist" aria-label="Legg til i ønskeliste"><i class="fa-regular fa-heart"></i></button>
+                    <section id="product-buttons">
+                        <button type="button" id="add-to-cart">Legg i handlekurv</button>
+                        <button type="button" id="wishlist" aria-label="Legg til i ønskeliste"><i class="fa-regular fa-heart"></i></button>
+                    </section>
                 </form>
 
                 <details>
@@ -232,7 +234,7 @@
                 </details>
             </section>
             <section class="content-container">
-                <header>
+                <header id="product-header">
                     <h2>Lignende produkter</h2>
                     <a href="#">Se flere lignende produkter <i class="fa-solid fa-arrow-right"></i></a>
                 </header>
@@ -294,7 +296,7 @@
             <a href="index.html" class="footer-logo"><h3>Logo</h3></a>
             <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
             <div id="bunn-container">
-                <section>
+                <section id="contacts">
                     <h3>KONTAKT</h3>
                     <ul>
                         <li>
