@@ -18,11 +18,10 @@
 }
 
 @mixin checkout-button-style(){
-    background-color: $darcgray;
+    background-color: $darkgray;
     color: $white;
     border: 1px solid $background;
     padding: 0.5rem;
-    margin: 1rem 0;
     font-size: 1rem;
     cursor: pointer;
     width: 100%;
