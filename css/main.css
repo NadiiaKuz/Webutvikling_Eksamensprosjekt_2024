@@ -409,7 +409,7 @@ body {
 .content-container #review-container article img {
   border-radius: 50px;
 }
-.content-container #review-container article figcaption h4 {
+.content-container #review-container article figcaption h3 {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 5px;

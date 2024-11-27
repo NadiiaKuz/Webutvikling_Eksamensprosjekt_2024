@@ -3,7 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+        <!--SEO meta starter her-->
+        <meta name="description" content="Online store where you can buy thing for whole family">
+        <meta name="author" content="Nadiia Kuz">
+        <meta name="keywords" content="online-store, cloth, family">
+        <!--Seo meta slutter her-->
+
+        <!--Facebook meta starter her-->
+        <meta property="og:title" content="Online store where you can buy thing for whole family">
+        <meta property="og:url" content="https://itstud.hiof.no/~nadiiak/Webutvikling_Eksamensprosjekt_2024/">
+        <meta property="og:image" content="https://picsum.photos/id/177/400/400">
+        <!--Facebook meta slutter her-->
+
         <link rel="stylesheet" href="ikoner/css/fontawesome.css">
         <link rel="stylesheet" href="ikoner/css/brands.css">
         <link rel="stylesheet" href="ikoner/css/solid.css">
@@ -11,19 +22,19 @@
 
         <link rel="stylesheet" href="css/main.css">
         
-        <title>Eksamen | Product</title>
+        <title>Eksamen | Forside</title>
     </head>
     <body>
-        <a href="#product-page-container" class="skip-to-content">Hopp til innhold</a>
+        <a href="#product-page-container" class="skip-to-content" aria-label="Hopp til hovedinnhold">Hopp til innhold</a>
         <header id="global-header" itemscope itemtype="https://schema.org/WebSite">
             <form role="search" itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
                 <label for="search" class="sr-only">Søk</label>
-                <input type="search" placeholder="søk her" id="search" itemprop="query-input">
-                <button type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i> <!-- https://fontawesome.com/ for ikoner -->
+                <input type="search" placeholder="søk her" id="search" itemprop="query-input" aria-label="Søkefelt">
+                <button type="submit" aria-label="Søk">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> <!-- https://fontawesome.com/ for ikoner -->
                 </button>
             </form>
-            <nav class="meny" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <nav class="meny" itemscope itemtype="https://schema.org/SiteNavigationElement" aria-label="Hovedmeny">
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
                     <li><a href="index.html#popular-products">Produkter</a></li>
@@ -33,16 +44,16 @@
                 </ul>
             </nav>
             <ul class="item">
-                <li><i class="fa-regular fa-user"></i></li>
-                <li><i class="fa-regular fa-heart"></i></li>
+                <li><i class="fa-regular fa-user" aria-hidden="true"></i></li>
+                <li><i class="fa-regular fa-heart" aria-hidden="true"></i></li>
                 <li>
-                    <a href="checkout.html">
+                    <a href="checkout.html" aria-label="Handlekurv">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
                 </li>
             </ul>
         </header>
-        <main id="product-page-container">
+        <main id="product-page-container" role="main">
             <nav id="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <ul>
                     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -95,7 +106,7 @@
                             <option value="XL">XL</option>
                         </select>
                         <section id="product-buttons">
-                            <button type="button" id="add-to-cart">Legg i handlekurv</button>
+                            <button type="button" id="add-to-cart" aria-label="Legg til i handlekurven">Legg i handlekurv</button>
                             <button type="button" id="wishlist" aria-label="Legg til i ønskeliste"><i class="fa-regular fa-heart"></i></button>
                         </section>
                     </form>
@@ -320,7 +331,7 @@
                 </div>
             </section>
         </main>
-        <footer id="bunn" itemscope itemtype="https://schema.org/WPFooter">
+        <footer id="bunn" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
             <section>
                 <a href="index.html" class="footer-logo" itemprop="url"><h2>Logo</h2></a>
                 <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
@@ -330,7 +341,7 @@
                     <h3>KONTAKT</h3>
                     <ul>
                         <li>
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                             <strong>Adresse:</strong> 
                             <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
                                 <span itemprop="streetAddress">B R A Veien 4</span>,
@@ -339,17 +350,17 @@
                             </span>
                         </li>
                         <li>
-                            <i class="fa-solid fa-phone"></i>
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
                             <strong>Telefon:</strong> 
                             <span itemprop="telephone"> 69 60 80 00 </span>
                         </li>
                         <li>
-                            <i class="fa-solid fa-envelope"></i>
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                             <strong>E-post:</strong> 
                             <span itemprop="email"> halden@hiof.no</span>
                         </li>
                         <li>
-                            <i class="fa-solid fa-clock"></i>
+                            <i class="fa-solid fa-clock" aria-hidden="true"></i>
                             <strong>Åpningstider:</strong> Stenger 15:00
                         </li>
                     </ul>
@@ -366,22 +377,22 @@
                     <h3>SOSIALE MEDIER</h3>
                     <ul id="media-icons">
                         <li>
-                            <a href="https://www.instagram.com/">
+                            <a href="https://www.instagram.com/" aria-label="Instagram">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/">
+                            <a href="https://www.facebook.com/" aria-label="Facebook">
                                 <i class="fa-brands fa-facebook"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/">
+                            <a href="https://www.linkedin.com/" aria-label="Linkedin">
                                 <i class="fa-brands fa-linkedin"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.pinterest.com/">
+                            <a href="https://www.pinterest.com/" aria-label="Pinterest">
                                 <i class="fa-brands fa-pinterest"></i>
                             </a>
                         </li>
@@ -389,5 +400,8 @@
                 </section>
             </div>
         </footer>
+        <a href="#global-header" class="back-to-top" aria-label="Tilbake til toppen">
+            <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        </a>
     </body>
 </html>
