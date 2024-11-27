@@ -1,4 +1,5 @@
 @use 'colors' as *;
+@use 'mixins' as *;
 
 @mixin full-size(){  
     body{
@@ -12,6 +13,25 @@
 
         .meny ul{
             flex-direction: row;
+
+            li:hover{
+                text-decoration: underline;
+            }
+
+            .logo:hover{
+                text-decoration: none;
+            }
+        }
+
+        .item a{
+            :hover {
+                transform: scale(1.2);
+            }
+        }
+        
+
+        button{
+            cursor: pointer;
         }
     }
 
@@ -92,10 +112,27 @@
         }
     }
 
-    #products .product-container{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        width: 100%;
+    #products {
+
+        button{
+            @include button-hover-effekt($gray);
+        }
+
+        #new-product:hover{
+            background-color: $gray;
+        }
+    
+        .product-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 100%;
+        }
+    }
+
+    .product-card{
+        i{
+            @include button-hover-effekt($bgHeard);
+        }
     }
 
     #category {
@@ -162,6 +199,27 @@
         #product-information-right{
             max-width: 440px;
             width: 100%;
+            
+            select{
+                &:hover{
+                    border: 1px solid $darkgray;
+                }
+            }
+
+            #product-buttons {
+                #add-to-cart{
+                    @include button-hover-effekt($gray);
+                }
+
+                #wishlist{
+                    @include button-hover-effekt($transparent, $bgHeard);
+                }
+            }
+
+            details summary{
+                cursor: pointer;
+            }
+        
         }
 
         .content-container{
@@ -193,6 +251,14 @@
                 flex-direction: column;
                 justify-self: end;
                 align-self: start;
+
+                button{
+                    cursor: pointer;
+                    
+                    &:hover{
+                        transform: scale(1.3);
+                    }
+                }
             }
         }
     }
@@ -233,6 +299,10 @@
                     grid-area: poststed;
                 }
             }
+
+            footer button{
+                @include button-hover-effekt($gray)
+            }
         }
     }
 
@@ -269,6 +339,10 @@
                     grid-area: cvc;
                 }
             }
+        }
+
+        button{
+            @include button-hover-effekt($gray)
         }
     }
 
