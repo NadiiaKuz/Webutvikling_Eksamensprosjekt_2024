@@ -211,6 +211,10 @@ body{
             padding: 8px;
             border-radius: 50%;
             cursor: pointer;
+            
+            &:hover{
+                background-color: $bgHeard;
+            }
         }
         
         img {
@@ -218,10 +222,6 @@ body{
             width: 100%;
             border-radius: 15px;
             margin-bottom: 2rem;
-        }
-
-        i:hover{
-            background-color: $bgHeard;
         }
     }
 
@@ -264,7 +264,7 @@ body{
         }
     }
 
-    #category-conteiner{
+    #category-container{
         display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: auto;
@@ -492,7 +492,7 @@ body{
         }
     }
 
-    #rewiw-container{
+    #review-container{
         display: flex;
         gap: 20px;
         overflow-x: scroll;
@@ -886,6 +886,32 @@ body{
     }
 }
 
+.skip-to-content {
+    position: absolute;
+    top: -50px;
+    background: $darkgray;
+    color: $white;
+    padding: 10px;
+    text-decoration: none;
+
+    &:focus {
+        top: 5px;
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: $background;
+    color: $white;
+    border-radius: 25%;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
 @media only screen and (min-width: 1024px){
     @include full-size;
 }
@@ -893,7 +919,7 @@ body{
 @media only screen and (min-width: 768px ) and (max-width: 1024px){
     #category {
 
-        #category-conteiner{ 
+        #category-container{ 
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, auto);
             grid-template-areas:

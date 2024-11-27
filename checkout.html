@@ -13,21 +13,22 @@
         
         <title>Eksamen | Checkout</title>
     </head>
-    <body> 
-        <header id="global-header">
-            <form role="search">
+    <body>
+        <a href="#checkout-main" class="skip-to-content">Hopp til innhold</a>
+        <header id="global-header" itemscope itemtype="https://schema.org/WebSite">
+            <form role="search" itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
                 <label for="search" class="sr-only">Søk</label>
-                <input type="search" placeholder="søk her" id="search">
+                <input type="search" placeholder="søk her" id="search" itemprop="query-input">
                 <button type="submit">
                     <i class="fa-solid fa-magnifying-glass"></i> <!-- https://fontawesome.com/ for ikoner -->
                 </button>
             </form>
-            <nav class="meny">
+            <nav class="meny" itemscope itemtype="https://schema.org/SiteNavigationElement">
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
                     <li><a href="index.html#popular-products">Produkter</a></li>
                     <li class="logo"><a href="index.html"><h1>Logo</h1></a></li>
-                    <li><a href="index.html#category-conteiner">Kategorier</a></li>
+                    <li><a href="index.html#category-container">Kategorier</a></li>
                     <li><a href="#contacts">Kontakt oss</a></li>
                 </ul>
             </nav>
@@ -46,16 +47,21 @@
                 <a href="#"><i class="fa-solid fa-arrow-left"></i> Fortsett å handle</a>
                 <h2>Kasse</h2>
             </header>
-            <section id="shopping-bag">
+            <section id="shopping-bag" itemscope itemtype="https://schema.org/ItemList">
                 <header class="title">
                     <h2>1. SHOPPINGBAGEN DIN</h2>
                 </header>
-                <article>
-                    <img src="img/product-dress.png" alt="Vintage dress">
+                <article itemscope itemtype="https://schema.org/Product">
+                    <img src="img/product-dress.png" alt="Vintage dress" itemprop="image">
                     <ul class="info">
-                        <li><a href="product.html"><strong>PRODUCT NAME</strong></a></li>
-                        <li>Kr 1999</li>
-                        <li>Farge: black</li>
+                        <li><a href="product.html" itemprop="url"><strong itemprop="name">PRODUCT NAME</strong></a></li>
+                        <li>
+                            <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span itemprop="priceCurrency" content="NOK">kr</span>
+                                <span itemprop="price">1999</span>
+                            </span>
+                        </li>
+                        <li>Farge: <span itemprop="color">black</span></li>
                     </ul>
                     <form>
                         <label for="size1">Størrelse</label>
@@ -75,12 +81,17 @@
                     </footer>
                 </article>
 
-                <article>
-                    <img src="img/product-dress.png" alt="Vintage dress">
+                <article itemscope itemtype="https://schema.org/Product">
+                    <img src="img/product-dress.png" alt="Vintage dress" itemprop="image">
                     <ul class="info">
-                        <li><a href="product.html"><strong>PRODUCT NAME</strong></a></li>
-                        <li>Kr 1999</li>
-                        <li>Farge: black</li>
+                        <li><a href="product.html" itemprop="url"><strong itemprop="name">PRODUCT NAME</strong></a></li>
+                        <li>
+                            <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span itemprop="priceCurrency" content="NOK">kr</span>
+                                <span itemprop="price">1999</span>
+                            </span>
+                        </li>
+                        <li>Farge: <span itemprop="color">black</span></li>
                     </ul>
                     <form>
                         <label for="size2">Størrelse</label>
@@ -100,12 +111,17 @@
                     </footer>
                 </article>
 
-                <article>
-                    <img src="img/product-dress.png" alt="Vintage dress">
+                <article itemscope itemtype="https://schema.org/Product">
+                    <img src="img/product-dress.png" alt="Vintage dress" itemprop="image">
                     <ul class="info">
-                        <li><a href="product.html"><strong>PRODUCT NAME</strong></a></li>
-                        <li>Kr 1999</li>
-                        <li>Farge: black</li>
+                        <li><a href="product.html" itemprop="url"><strong itemprop="name">PRODUCT NAME</strong></a></li>
+                        <li>
+                            <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span itemprop="priceCurrency" content="NOK">kr</span>
+                                <span itemprop="price">1999</span>
+                            </span>
+                        </li>
+                        <li>Farge: <span itemprop="color">black</span></li>
                     </ul>
                     <form>
                         <label for="size3">Størrelse</label>
@@ -126,7 +142,7 @@
                 </article>
             </section>
             
-            <section id="buyer-information">
+            <section id="buyer-information" itemscope itemtype="https://schema.org/Person">
                 <header class="title">
                     <h2>2. DINE OPPLYSNINGER</h2>
                 </header>
@@ -135,19 +151,19 @@
                         <legend>Leveringsadresse</legend>
                         <label id="fornavn">
                             Fornavn
-                            <input type="text" name="fornavn" placeholder="Nora*" maxlength="45" required>
+                            <input type="text" name="fornavn" placeholder="Nora*" maxlength="45" itemprop="givenName" required>
                         </label>
                         <label id="etternavn">
                             Etternavn
-                            <input type="text" name="etternavn" placeholder="Nordman*" maxlength="45" required>
+                            <input type="text" name="etternavn" placeholder="Nordman*" maxlength="45" itemprop="familyName" required>
                         </label>
                         <label id="gateadresse">
                             Gateadresse
-                            <input type="text" name="gateadresse" placeholder="BRA veien 4*" required>
+                            <input type="text" name="gateadresse" placeholder="BRA veien 4*" itemprop="address" required>
                         </label>
                         <label id="postnummer">
                             Postnummer
-                            <input type="number" name="postnummer" placeholder="1752*" min="1" required>
+                            <input type="number" name="postnummer" placeholder="1752*" min="0" required>
                         </label>
                         <label id="poststed">
                             Poststed
@@ -217,7 +233,7 @@
                 </article>
             </section>
             
-            <section id="payment">
+            <section id="payment" itemscope itemtype="https://schema.org/PaymentMethod">
                 <header class="title">
                     <h2>4. BETALING</h2>
                 </header>
@@ -226,15 +242,15 @@
                         <legend>BETAL MED KORT <i class="fa-solid fa-credit-card"></i></legend>
                         <label id="card-number">
                             Kortnummer
-                            <input type="text" name="card-number" placeholder="342342****4435" pattern="\d*" maxlength="16" required>
+                            <input type="text" name="card-number" placeholder="342342****4435" pattern="\d{16}" maxlength="16" inputmode="numeric" required>
                         </label>
                         <label id="expiry-date">
                             Utløpsdato
-                            <input type="date" name="expiry-date" required>
+                            <input type="text" name="expiry-date" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/\d{2}$" maxlength="5" required>
                         </label>
                         <label id="cvc">
                             CVC/CVV
-                            <input type="text" name="cvc" placeholder="CVC/CVV" pattern="\d*" maxlength="3" required>
+                            <input type="text" name="cvc" placeholder="CVC/CVV" pattern="\d{3}" maxlength="3" inputmode="numeric" required>
                         </label>
                     </fieldset>
                     <section id="price">
@@ -258,26 +274,33 @@
                 </form>
             </section>
         </main>
-        <footer id="bunn">
+        <footer id="bunn" itemscope itemtype="https://schema.org/WPFooter">
             <section>
-                <a href="index.html" class="footer-logo"><h2>Logo</h2></a>
+                <a href="index.html" class="footer-logo" itemprop="url"><h2>Logo</h2></a>
                 <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
             </section>
             <div id="bunn-container">
-                <section id="contacts">
+                <section id="contacts" itemscope itemtype="https://schema.org/Organization">
                     <h3>KONTAKT</h3>
                     <ul>
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <strong>Adresse:</strong> B R A Veien 4, 1757 Halden
+                            <strong>Adresse:</strong> 
+                            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                <span itemprop="streetAddress">B R A Veien 4</span>,
+                                <span itemprop="postalCode">1757</span>
+                                <span itemprop="addressLocality">Halden</span>
+                            </span>
                         </li>
                         <li>
                             <i class="fa-solid fa-phone"></i>
-                            <strong>Telefon:</strong> 69 60 80 00
+                            <strong>Telefon:</strong> 
+                            <span itemprop="telephone"> 69 60 80 00 </span>
                         </li>
                         <li>
                             <i class="fa-solid fa-envelope"></i>
-                            <strong>E-post:</strong> halden@hiof.no
+                            <strong>E-post:</strong> 
+                            <span itemprop="email"> halden@hiof.no</span>
                         </li>
                         <li>
                             <i class="fa-solid fa-clock"></i>
@@ -288,8 +311,8 @@
                 <section>
                     <h3>SNARVEIER</h3>
                     <ul>
-                        <li><a href="index.html#products">Produkter</a></li>
-                        <li><a href="index.html#category">Kategorier</a></li>
+                        <li><a href="#products">Produkter</a></li>
+                        <li><a href="#category">Kategorier</a></li>
                         <li><a href="#bunn">Kontakt oss</a></li>
                     </ul>
                 </section>

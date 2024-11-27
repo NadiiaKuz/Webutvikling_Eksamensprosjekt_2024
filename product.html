@@ -13,21 +13,22 @@
         
         <title>Eksamen | Product</title>
     </head>
-    <body> 
-        <header id="global-header">
-            <form role="search">
+    <body>
+        <a href="#product-page-container" class="skip-to-content">Hopp til innhold</a>
+        <header id="global-header" itemscope itemtype="https://schema.org/WebSite">
+            <form role="search" itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
                 <label for="search" class="sr-only">Søk</label>
-                <input type="search" placeholder="søk her" id="search">
+                <input type="search" placeholder="søk her" id="search" itemprop="query-input">
                 <button type="submit">
                     <i class="fa-solid fa-magnifying-glass"></i> <!-- https://fontawesome.com/ for ikoner -->
                 </button>
             </form>
-            <nav class="meny">
+            <nav class="meny" itemscope itemtype="https://schema.org/SiteNavigationElement">
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
                     <li><a href="index.html#popular-products">Produkter</a></li>
                     <li class="logo"><a href="index.html"><h1>Logo</h1></a></li>
-                    <li><a href="index.html#category-conteiner">Kategorier</a></li>
+                    <li><a href="index.html#category-container">Kategorier</a></li>
                     <li><a href="#contacts">Kontakt oss</a></li>
                 </ul>
             </nav>
@@ -42,197 +43,224 @@
             </ul>
         </header>
         <main id="product-page-container">
-            <nav id="breadcrumb">
+            <nav id="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <ul>
-                    <li><a href="index.html">Hjem</a></li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="index.html" itemprop="item">
+                            <span itemprop="name">Hjem</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </li>
                     <li><i class="fa-solid fa-angle-right"></i></li>
-                    <li><a href="index.html#category-conteiner">Kategori</a></li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="index.html#category-container" itemprop="item">
+                            <span itemprop="name">Kategori</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
                     <li><i class="fa-solid fa-angle-right"></i></li>
-                    <li><strong>Produktnavn</strong></li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <strong itemprop="name">Produktnavn</strong>
+                        <meta itemprop="position" content="3">
+                    </li>
                   </ul>
             </nav>
-            <section id="product-pictures-left">
-                <img src="img/product-dress.png" alt="Vintage dress">
-                <img src="img/product-dress.png" alt="Vintage dress">
-                <img src="img/product-dress.png" alt="Vintage dress">
-                <img src="img/product-dress.png" alt="Vintage dress" id="active-img">
-            </section>
-            <section id="product-information-right">
-                <h2>Produktnavn</h2>
-                <a href="#">MERKENAVN</a>
-                <p>5 195 kr inkl. mva.</p>
-                <p>Farge: <strong>black</strong></p>
+            <div id="product-content">
+                <section id="product-pictures-left">
+                    <img src="img/product-dress.png" alt="Vintage dress">
+                    <img src="img/product-dress.png" alt="Vintage dress">
+                    <img src="img/product-dress.png" alt="Vintage dress">
+                    <img src="img/product-dress.png" alt="Vintage dress" id="active-img">
+                </section>
+                <section id="product-information-right" itemscope itemtype="https://schema.org/Product">
+                    <h2 itemprop="name">Produktnavn</h2>
+                    <a href="#" itemprop="brand" itemscope itemtype="https://schema.org/Brand">
+                        <span itemprop="name">MERKENAVN</span>
+                    </a>
+                    <p>
+                        <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <span itemprop="price">5 195</span> <span itemprop="priceCurrency" content="NOK">kr</span> inkl. mva.
+                        </span>
+                    </p>
+                    <p>Farge: <strong>black</strong></p>
 
-                <form>
-                    <label for="size-select">Velg størrelse:</label>
-                    <select id="size-select" name="size">
-                        <option value="Velg størrelse">Velg størrelse</option>
-                        <option value="XS">XS</option>
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                    </select>
-                    <section id="product-buttons">
-                        <button type="button" id="add-to-cart">Legg i handlekurv</button>
-                        <button type="button" id="wishlist" aria-label="Legg til i ønskeliste"><i class="fa-regular fa-heart"></i></button>
-                    </section>
-                </form>
+                    <form>
+                        <label for="size-select">Velg størrelse:</label>
+                        <select id="size-select" name="size">
+                            <option value="Velg størrelse">Velg størrelse</option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        <section id="product-buttons">
+                            <button type="button" id="add-to-cart">Legg i handlekurv</button>
+                            <button type="button" id="wishlist" aria-label="Legg til i ønskeliste"><i class="fa-regular fa-heart"></i></button>
+                        </section>
+                    </form>
 
-                <details>
-                    <summary>Materiale og vedlikehold <i class="fa-solid fa-plus"></i></summary>
-                    <ul>
-                        <li>Overmateriale: 95% viskose, 5% elastan</li>
-                        <li>Materiale ermer: 100% polyester</li>
-                        <li>Materiale: Jersey</li>
-                    </ul>
-                </details>
+                    <details>
+                        <summary>Materiale og vedlikehold <i class="fa-solid fa-plus"></i></summary>
+                        <ul>
+                            <li>Overmateriale: 95% viskose, 5% elastan</li>
+                            <li>Materiale ermer: 100% polyester</li>
+                            <li>Materiale: Jersey</li>
+                        </ul>
+                    </details>
 
-                <details>
-                    <summary>Produktdetaljer <i class="fa-solid fa-plus"></i></summary>
-                    <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks, and seasonal special events.</p>
-                </details>
+                    <details>
+                        <summary>Produktdetaljer <i class="fa-solid fa-plus"></i></summary>
+                        <p itemprop="description">Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks, and seasonal special events.</p>
+                    </details>
 
-                <details>
-                    <summary>Størrelsestabell <i class="fa-solid fa-plus"></i></summary>
-                    <p>Sjekk hvordan din vanlige størrelse konverterer til andre størrelser i vår størrelsesguide. Husk at dette kun er en generell guide og at størrelsene kan variere i forhold til merke og modell.</p>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>EU</th>
-                                <th>INT</th>
-                                <th>BRYSTVIDDE</th>
-                                <th>LIVVIDDE</th>
-                                <th>HOFTEMÅL</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>32</td>
-                                <td>XXS</td>
-                                <td>76</td>
-                                <td>63</td>
-                                <td>85</td>
-                            </tr>
-                            <tr>
-                                <td>34</td>
-                                <td>XS</td>
-                                <td>80</td>
-                                <td>66</td>
-                                <td>89</td>
-                            </tr>
-                            <tr>
-                                <td>36</td>
-                                <td>S</td>
-                                <td>84</td>
-                                <td>69</td>
-                                <td>93</td>
-                            </tr>
-                            <tr>
-                                <td>38</td>
-                                <td>M</td>
-                                <td>88</td>
-                                <td>72</td>
-                                <td>97</td>
-                            </tr>
-                            <tr>
-                                <td>40</td>
-                                <td>L</td>
-                                <td>92</td>
-                                <td>76</td>
-                                <td>100</td>
-                            </tr>
-                            <tr>
-                                <td>42</td>
-                                <td>XL</td>
-                                <td>96</td>
-                                <td>80</td>
-                                <td>103</td>
-                            </tr>
-                            <tr>
-                                <td>44</td>
-                                <td>XXL</td>
-                                <td>100</td>
-                                <td>85</td>
-                                <td>106</td>
-                            </tr>
-                            <tr>
-                                <td>46</td>
-                                <td>3XL</td>
-                                <td>104</td>
-                                <td>90</td>
-                                <td>109</td>
-                            </tr>
-                            <tr>
-                                <td>48</td>
-                                <td>4XL</td>
-                                <td>108</td>
-                                <td>95</td>
-                                <td>114</td>
-                            </tr>
-                            <tr>
-                                <td>50</td>
-                                <td>5XL</td>
-                                <td>112</td>
-                                <td>100</td>
-                                <td>119</td>
-                            </tr>
-                            <tr>
-                                <td>52</td>
-                                <td>6XL</td>
-                                <td>116</td>
-                                <td>105</td>
-                                <td>124</td>
-                            </tr>
-                            <tr>
-                                <td>54</td>
-                                <td>7XL</td>
-                                <td>120</td>
-                                <td>112.5</td>
-                                <td>129</td>
-                            </tr>
-                            <tr>
-                                <td>56</td>
-                                <td>8XL</td>
-                                <td>124</td>
-                                <td>120</td>
-                                <td>134</td>
-                            </tr>
-                            <tr>
-                                <td>58</td>
-                                <td>9XL</td>
-                                <td>129</td>
-                                <td>126</td>
-                                <td>140</td>
-                            </tr>
-                            <tr>
-                                <td>60</td>
-                                <td>10XL</td>
-                                <td>135.5</td>
-                                <td>135.5</td>
-                                <td>148</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </details>
+                    <details>
+                        <summary>Størrelsestabell <i class="fa-solid fa-plus"></i></summary>
+                        <p>Sjekk hvordan din vanlige størrelse konverterer til andre størrelser i vår størrelsesguide. Husk at dette kun er en generell guide og at størrelsene kan variere i forhold til merke og modell.</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>EU</th>
+                                    <th>INT</th>
+                                    <th>BRYSTVIDDE</th>
+                                    <th>LIVVIDDE</th>
+                                    <th>HOFTEMÅL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>32</td>
+                                    <td>XXS</td>
+                                    <td>76</td>
+                                    <td>63</td>
+                                    <td>85</td>
+                                </tr>
+                                <tr>
+                                    <td>34</td>
+                                    <td>XS</td>
+                                    <td>80</td>
+                                    <td>66</td>
+                                    <td>89</td>
+                                </tr>
+                                <tr>
+                                    <td>36</td>
+                                    <td>S</td>
+                                    <td>84</td>
+                                    <td>69</td>
+                                    <td>93</td>
+                                </tr>
+                                <tr>
+                                    <td>38</td>
+                                    <td>M</td>
+                                    <td>88</td>
+                                    <td>72</td>
+                                    <td>97</td>
+                                </tr>
+                                <tr>
+                                    <td>40</td>
+                                    <td>L</td>
+                                    <td>92</td>
+                                    <td>76</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>42</td>
+                                    <td>XL</td>
+                                    <td>96</td>
+                                    <td>80</td>
+                                    <td>103</td>
+                                </tr>
+                                <tr>
+                                    <td>44</td>
+                                    <td>XXL</td>
+                                    <td>100</td>
+                                    <td>85</td>
+                                    <td>106</td>
+                                </tr>
+                                <tr>
+                                    <td>46</td>
+                                    <td>3XL</td>
+                                    <td>104</td>
+                                    <td>90</td>
+                                    <td>109</td>
+                                </tr>
+                                <tr>
+                                    <td>48</td>
+                                    <td>4XL</td>
+                                    <td>108</td>
+                                    <td>95</td>
+                                    <td>114</td>
+                                </tr>
+                                <tr>
+                                    <td>50</td>
+                                    <td>5XL</td>
+                                    <td>112</td>
+                                    <td>100</td>
+                                    <td>119</td>
+                                </tr>
+                                <tr>
+                                    <td>52</td>
+                                    <td>6XL</td>
+                                    <td>116</td>
+                                    <td>105</td>
+                                    <td>124</td>
+                                </tr>
+                                <tr>
+                                    <td>54</td>
+                                    <td>7XL</td>
+                                    <td>120</td>
+                                    <td>112.5</td>
+                                    <td>129</td>
+                                </tr>
+                                <tr>
+                                    <td>56</td>
+                                    <td>8XL</td>
+                                    <td>124</td>
+                                    <td>120</td>
+                                    <td>134</td>
+                                </tr>
+                                <tr>
+                                    <td>58</td>
+                                    <td>9XL</td>
+                                    <td>129</td>
+                                    <td>126</td>
+                                    <td>140</td>
+                                </tr>
+                                <tr>
+                                    <td>60</td>
+                                    <td>10XL</td>
+                                    <td>135.5</td>
+                                    <td>135.5</td>
+                                    <td>148</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </details>
 
-                <details>
-                    <summary>
-                        <span>Anmeldelser</span>
-                        <span>★★★★☆ 32</span>
-                    </summary>
-                    <article>
-                        <header>
-                            <h3>Robert Labrador</h3>
-                            <time datetime="2024-10-02">2024-10-02</time>
-                        </header>
-                        <p>★★★☆☆</p>
-                        <p>
-                            Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod.
-                        </p>
-                    </article>
-                </details>
-            </section>
+                    <details>
+                        <summary>
+                            <span>Anmeldelser</span>
+                            <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                ★★★★☆ 
+                                <span itemprop="reviewCount">32</span>
+                            </span>
+                        </summary>
+                        <article itemscope itemtype="https://schema.org/Review">
+                            <header>
+                                <h3 itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Robert Labrador</span>
+                                </h3>
+                                <time datetime="2024-10-02" itemprop="datePublished">2024-10-02</time>
+                            </header>
+                            <p>★★★☆☆</p>
+                            <p itemprop="reviewBody">
+                                Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod.
+                            </p>
+                        </article>
+                    </details>
+                
+                </section>
+            </div>
             <section class="content-container">
                 <header id="product-header">
                     <h2>Lignende produkter</h2>
@@ -292,26 +320,33 @@
                 </div>
             </section>
         </main>
-        <footer id="bunn">
+        <footer id="bunn" itemscope itemtype="https://schema.org/WPFooter">
             <section>
-                <a href="index.html" class="footer-logo"><h2>Logo</h2></a>
+                <a href="index.html" class="footer-logo" itemprop="url"><h2>Logo</h2></a>
                 <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
             </section>
             <div id="bunn-container">
-                <section id="contacts">
+                <section id="contacts" itemscope itemtype="https://schema.org/Organization">
                     <h3>KONTAKT</h3>
                     <ul>
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <strong>Adresse:</strong> B R A Veien 4, 1757 Halden
+                            <strong>Adresse:</strong> 
+                            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                <span itemprop="streetAddress">B R A Veien 4</span>,
+                                <span itemprop="postalCode">1757</span>
+                                <span itemprop="addressLocality">Halden</span>
+                            </span>
                         </li>
                         <li>
                             <i class="fa-solid fa-phone"></i>
-                            <strong>Telefon:</strong> 69 60 80 00
+                            <strong>Telefon:</strong> 
+                            <span itemprop="telephone"> 69 60 80 00 </span>
                         </li>
                         <li>
                             <i class="fa-solid fa-envelope"></i>
-                            <strong>E-post:</strong> halden@hiof.no
+                            <strong>E-post:</strong> 
+                            <span itemprop="email"> halden@hiof.no</span>
                         </li>
                         <li>
                             <i class="fa-solid fa-clock"></i>
@@ -322,8 +357,8 @@
                 <section>
                     <h3>SNARVEIER</h3>
                     <ul>
-                        <li><a href="index.html#products">Produkter</a></li>
-                        <li><a href="index.html#category">Kategorier</a></li>
+                        <li><a href="#products">Produkter</a></li>
+                        <li><a href="#category">Kategorier</a></li>
                         <li><a href="#bunn">Kontakt oss</a></li>
                     </ul>
                 </section>

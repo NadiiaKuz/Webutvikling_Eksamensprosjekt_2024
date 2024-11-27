@@ -14,20 +14,21 @@
         <title>Eksamen | Forside</title>
     </head>
     <body>
-        <header id="global-header">
-            <form role="search">
+        <a href="#main-content" class="skip-to-content">Hopp til innhold</a>
+        <header id="global-header" itemscope itemtype="https://schema.org/WebSite">
+            <form role="search" itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
                 <label for="search" class="sr-only">Søk</label>
-                <input type="search" placeholder="søk her" id="search">
+                <input type="search" placeholder="søk her" id="search" itemprop="query-input">
                 <button type="submit">
                     <i class="fa-solid fa-magnifying-glass"></i> <!-- https://fontawesome.com/ for ikoner -->
                 </button>
             </form>
-            <nav class="meny">
+            <nav class="meny" itemscope itemtype="https://schema.org/SiteNavigationElement">
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
-                    <li><a href="#popular-products">Produkter</a></li>
+                    <li><a href="index.html#popular-products">Produkter</a></li>
                     <li class="logo"><a href="index.html"><h1>Logo</h1></a></li>
-                    <li><a href="#category-conteiner">Kategorier</a></li>
+                    <li><a href="index.html#category-container">Kategorier</a></li>
                     <li><a href="#contacts">Kontakt oss</a></li>
                 </ul>
             </nav>
@@ -41,24 +42,24 @@
                 </li>
             </ul>
         </header>
-        <main>
+        <main id="main-content">
             <section class="banner">
                 <button class="nav-prev"><i class="fa-solid fa-arrow-left"></i></button>
                 <div class="banner-slides">
-                    <article id="banner-1">
-                        <h2>Et harum quidem rerum facilis est et expedita distinctio.</h2>
-                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime.</p>
-                        <a href="#" class="btn">Les mer</a>
+                    <article id="banner-1" itemscope itemtype="https://schema.org/CreativeWork">
+                        <h2 itemprop="headline">Et harum quidem rerum facilis est et expedita distinctio.</h2>
+                        <p itemprop="text">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime.</p>
+                        <a href="#" class="btn" itemprop="url">Les mer</a>
                     </article>
-                    <article id="banner-2">
-                        <h2>Et harum quidem rerum facilis est et expedita distinctio.</h2>
-                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime.</p>
-                        <a href="#" class="btn">Les mer</a>
+                    <article id="banner-2" itemscope itemtype="https://schema.org/CreativeWork">
+                        <h2 itemprop="headline">Et harum quidem rerum facilis est et expedita distinctio.</h2>
+                        <p itemprop="text">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime.</p>
+                        <a href="#" class="btn" itemprop="url">Les mer</a>
                     </article>
-                    <article id="banner-3">
-                        <h2>Et harum quidem rerum facilis est et expedita distinctio.</h2>
-                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime.</p>
-                        <a href="#" class="btn">Les mer</a>
+                    <article id="banner-3" itemscope itemtype="https://schema.org/CreativeWork">
+                        <h2 itemprop="headline">Et harum quidem rerum facilis est et expedita distinctio.</h2>
+                        <p itemprop="text">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime.</p>
+                        <a href="#" class="btn" itemprop="url">Les mer</a>
                     </article>
                 </div>
                 <button class="nav-next"><i class="fa-solid fa-arrow-right"></i></button>
@@ -74,63 +75,135 @@
                     </nav>
                 </header>
                 <div class="product-container" id="popular-products">
-                    <article class="product-card">
+                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <figure>
                             <i class="fa-regular fa-heart"></i>
-                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt">
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt" itemprop="image">
                             <figcaption>
-                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
-                                <p>★★★★☆ 842 Reviews</p>
+                                <a href="product.html" itemprop="url">
+                                    <strong itemprop="name">Product name</strong>
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <span itemprop="priceCurrency" content="NOK">kr</span>
+                                        <span itemprop="price">1999</span> 
+                                    </span>
+                                </a>
+                                <p>
+                                    <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                        ★★★★☆ 
+                                        <span itemprop="reviewCount">842</span> 
+                                        Reviews
+                                    </span>
+                                </p>
                             </figcaption>
                         </figure>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <figure>
                             <i class="fa-regular fa-heart"></i>
-                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt">
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt" itemprop="image">
                             <figcaption>
-                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
-                                <p>★★★★☆ 842 Reviews</p>
+                                <a href="product.html" itemprop="url">
+                                    <strong itemprop="name">Product name</strong>
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <span itemprop="priceCurrency" content="NOK">kr</span>
+                                        <span itemprop="price">1999</span> 
+                                    </span>
+                                </a>
+                                <p>
+                                    <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                        ★★★★☆ 
+                                        <span itemprop="reviewCount">842</span> 
+                                        Reviews
+                                    </span>
+                                </p>
                             </figcaption>
                         </figure>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <figure>
                             <i class="fa-regular fa-heart"></i>
-                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt">
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt" itemprop="image">
                             <figcaption>
-                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
-                                <p>★★★★☆ 842 Reviews</p>
+                                <a href="product.html" itemprop="url">
+                                    <strong itemprop="name">Product name</strong>
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <span itemprop="priceCurrency" content="NOK">kr</span>
+                                        <span itemprop="price">1999</span> 
+                                    </span>
+                                </a>
+                                <p>
+                                    <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                        ★★★★☆ 
+                                        <span itemprop="reviewCount">842</span> 
+                                        Reviews
+                                    </span>
+                                </p>
                             </figcaption>
                         </figure>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <figure>
                             <i class="fa-regular fa-heart"></i>
-                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt">
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt" itemprop="image">
                             <figcaption>
-                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
-                                <p>★★★★☆ 842 Reviews</p>
+                                <a href="product.html" itemprop="url">
+                                    <strong itemprop="name">Product name</strong>
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <span itemprop="priceCurrency" content="NOK">kr</span>
+                                        <span itemprop="price">1999</span> 
+                                    </span>
+                                </a>
+                                <p>
+                                    <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                        ★★★★☆ 
+                                        <span itemprop="reviewCount">842</span> 
+                                        Reviews
+                                    </span>
+                                </p>
                             </figcaption>
                         </figure>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <figure>
                             <i class="fa-regular fa-heart"></i>
-                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt">
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt" itemprop="image">
                             <figcaption>
-                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
-                                <p>★★★★☆ 842 Reviews</p>
+                                <a href="product.html" itemprop="url">
+                                    <strong itemprop="name">Product name</strong>
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <span itemprop="priceCurrency" content="NOK">kr</span>
+                                        <span itemprop="price">1999</span> 
+                                    </span>
+                                </a>
+                                <p>
+                                    <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                        ★★★★☆ 
+                                        <span itemprop="reviewCount">842</span> 
+                                        Reviews
+                                    </span>
+                                </p>
                             </figcaption>
                         </figure>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <figure>
                             <i class="fa-regular fa-heart"></i>
-                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt">
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt" itemprop="image">
                             <figcaption>
-                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
-                                <p>★★★★☆ 842 Reviews</p>
+                                <a href="product.html" itemprop="url">
+                                    <strong itemprop="name">Product name</strong>
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <span itemprop="priceCurrency" content="NOK">kr</span>
+                                        <span itemprop="price">1999</span> 
+                                    </span>
+                                </a>
+                                <p>
+                                    <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                        ★★★★☆ 
+                                        <span itemprop="reviewCount">842</span> 
+                                        Reviews
+                                    </span>
+                                </p>
                             </figcaption>
                         </figure>
                     </article>
@@ -141,21 +214,21 @@
                     <h2>Våre mest populære kategorier</h2>
                     <p>Oppdag det beste av det beste</p>
                 </header>
-                <div id="category-conteiner">
-                    <article id="category-1">
-                        <h3>Category 1</h3>
+                <div id="category-container">
+                    <article id="category-1" itemscope itemtype="https://schema.org/CategoryCode">
+                        <h3 itemprop="name">Category 1</h3>
                     </article>
-                    <article id="category-2">
-                        <h3>Category 2</h3>
+                    <article id="category-2" itemscope itemtype="https://schema.org/CategoryCode">
+                        <h3 itemprop="name">Category 2</h3>
                     </article>
-                    <article id="category-3">
-                        <h3>Category 3</h3>
+                    <article id="category-3" itemscope itemtype="https://schema.org/CategoryCode">
+                        <h3 itemprop="name">Category 3</h3>
                     </article>
-                    <article id="category-4">
-                        <h3>Category 4</h3>
+                    <article id="category-4" itemscope itemtype="https://schema.org/CategoryCode">
+                        <h3 itemprop="name">Category 4</h3>
                     </article>
-                    <article id="category-5">
-                        <h3>Category 5</h3>
+                    <article id="category-5" itemscope itemtype="https://schema.org/CategoryCode">
+                        <h3 itemprop="name">Category 5</h3>
                     </article>
                 </div>
             </section>
@@ -163,80 +236,97 @@
                 <header>
                     <h2>Anmeldelser</h2>
                 </header>
-                <div id="rewiw-container">
-                    <article>
+                <div id="review-container">
+                    <article itemscope itemtype="https://schema.org/Review">
                         <figure>
-                            <img src="https://picsum.photos/id/237/100/100" alt="Reviewer foto">
+                            <img src="https://picsum.photos/id/237/100/100" alt="Reviewer foto" itemprop="image">
                             <figcaption>
-                                <h4>Robert Labrador</h4>
+                                <h4 itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Robert Labrador</span>
+                                </h4>
                                 <p>★★★☆☆</p>
-                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+                                <p itemprop="reviewBody">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
                             </figcaption>
                         </figure>
                     </article>
-                    <article>
+                    <article itemscope itemtype="https://schema.org/Review">
                         <figure>
-                            <img src="https://picsum.photos/id/237/100/100" alt="Reviewer foto">
+                            <img src="https://picsum.photos/id/237/100/100" alt="Reviewer foto" itemprop="image">
                             <figcaption>
-                                <h4>Robert Labrador</h4>
+                                <h4 itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Robert Labrador</span>
+                                </h4>
                                 <p>★★★☆☆</p>
-                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+                                <p itemprop="reviewBody">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
                             </figcaption>
                         </figure>
                     </article>
-                    <article>
+                    <article itemscope itemtype="https://schema.org/Review">
                         <figure>
-                            <img src="https://picsum.photos/id/237/100/100" alt="Reviewer foto">
+                            <img src="https://picsum.photos/id/237/100/100" alt="Reviewer foto" itemprop="image">
                             <figcaption>
-                                <h4>Robert Labrador</h4>
+                                <h4 itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Robert Labrador</span>
+                                </h4>
                                 <p>★★★☆☆</p>
-                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+                                <p itemprop="reviewBody">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
                             </figcaption>
                         </figure>
                     </article>
-                    <article>
+                    <article itemscope itemtype="https://schema.org/Review">
                         <figure>
-                            <img src="https://picsum.photos/id/237/100/100" alt="Reviewer foto">
+                            <img src="https://picsum.photos/id/237/100/100" alt="Reviewer foto" itemprop="image">
                             <figcaption>
-                                <h4>Robert Labrador</h4>
+                                <h4 itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Robert Labrador</span>
+                                </h4>
                                 <p>★★★☆☆</p>
-                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+                                <p itemprop="reviewBody">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
                             </figcaption>
                         </figure>
                     </article>
-                    <article>
+                    <article itemscope itemtype="https://schema.org/Review">
                         <figure>
-                            <img src="https://picsum.photos/id/237/100/100" alt="Reviewer foto">
+                            <img src="https://picsum.photos/id/237/100/100" alt="Reviewer foto" itemprop="image">
                             <figcaption>
-                                <h4>Robert Labrador</h4>
+                                <h4 itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Robert Labrador</span>
+                                </h4>
                                 <p>★★★☆☆</p>
-                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+                                <p itemprop="reviewBody">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
                             </figcaption>
                         </figure>
                     </article>
                 </div>
             </section>
         </main>
-        <footer id="bunn">
+        <footer id="bunn" itemscope itemtype="https://schema.org/WPFooter">
             <section>
-                <a href="index.html" class="footer-logo"><h2>Logo</h2></a>
+                <a href="index.html" class="footer-logo" itemprop="url"><h2>Logo</h2></a>
                 <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
             </section>
             <div id="bunn-container">
-                <section id="contacts">
+                <section id="contacts" itemscope itemtype="https://schema.org/Organization">
                     <h3>KONTAKT</h3>
                     <ul>
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <strong>Adresse:</strong> B R A Veien 4, 1757 Halden
+                            <strong>Adresse:</strong> 
+                            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                <span itemprop="streetAddress">B R A Veien 4</span>,
+                                <span itemprop="postalCode">1757</span>
+                                <span itemprop="addressLocality">Halden</span>
+                            </span>
                         </li>
                         <li>
                             <i class="fa-solid fa-phone"></i>
-                            <strong>Telefon:</strong> 69 60 80 00
+                            <strong>Telefon:</strong> 
+                            <span itemprop="telephone"> 69 60 80 00 </span>
                         </li>
                         <li>
                             <i class="fa-solid fa-envelope"></i>
-                            <strong>E-post:</strong> halden@hiof.no
+                            <strong>E-post:</strong> 
+                            <span itemprop="email"> halden@hiof.no</span>
                         </li>
                         <li>
                             <i class="fa-solid fa-clock"></i>
@@ -279,5 +369,8 @@
                 </section>
             </div>
         </footer>
+        <a href="#global-header" class="back-to-top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
     </body>
 </html>
