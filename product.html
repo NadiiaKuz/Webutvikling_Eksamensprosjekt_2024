@@ -31,7 +31,7 @@
                 <label for="search" class="sr-only">Søk</label>
                 <input type="search" placeholder="søk her" id="search" itemprop="query-input" aria-label="Søkefelt">
                 <button type="submit" aria-label="Søk">
-                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> <!-- https://fontawesome.com/ for ikoner -->
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                 </button>
             </form>
             <nav class="meny" itemscope itemtype="https://schema.org/SiteNavigationElement" aria-label="Hovedmeny">
@@ -85,12 +85,13 @@
                 </section>
                 <section id="product-information-right" itemscope itemtype="https://schema.org/Product">
                     <h2 itemprop="name">Produktnavn</h2>
+                    <meta itemprop="image" content="img/product-dress.png">
                     <a href="#" itemprop="brand" itemscope itemtype="https://schema.org/Brand">
                         <span itemprop="name">MERKENAVN</span>
                     </a>
                     <p>
                         <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                            <span itemprop="price">5 195</span> <span itemprop="priceCurrency" content="NOK">kr</span> inkl. mva.
+                            <span itemprop="price">5195</span> <span itemprop="priceCurrency" content="NOK">kr</span> inkl. mva.
                         </span>
                     </p>
                     <p>Farge: <strong>black</strong></p>
@@ -252,7 +253,7 @@
                         <summary>
                             <span>Anmeldelser</span>
                             <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                                ★★★★☆ 
+                                <span itemprop="ratingValue">★★★★☆ </span>
                                 <span itemprop="reviewCount">32</span>
                             </span>
                         </summary>
@@ -263,7 +264,7 @@
                                 </h3>
                                 <time datetime="2024-10-02" itemprop="datePublished">2024-10-02</time>
                             </header>
-                            <p>★★★☆☆</p>
+                            <p>★★★☆☆ </p>
                             <p itemprop="reviewBody">
                                 Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod.
                             </p>
@@ -278,53 +279,113 @@
                     <a href="#">Se flere lignende produkter <i class="fa-solid fa-arrow-right"></i></a>
                 </header>
                 <div id="products-container">
-                    <article class="product-card">
+                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <figure>
-                            <i class="fa-regular fa-heart"></i>
-                            <img src="https://picsum.photos/id/177/400/400" alt="Lignende produkter">
+                            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt" itemprop="image">
                             <figcaption>
-                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
-                                <p>★★★★☆ 842 Reviews</p>
+                                <a href="product.html" itemprop="url">
+                                    <strong itemprop="name">Product name</strong>
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <span itemprop="priceCurrency" content="NOK">kr</span>
+                                        <span itemprop="price">1999</span> 
+                                    </span>
+                                </a>
+                                <p>
+                                    <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                        <span itemprop="ratingValue">★★★★☆ </span>
+                                        <span itemprop="reviewCount">842</span> 
+                                        Reviews
+                                    </span>
+                                </p>
                             </figcaption>
                         </figure>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <figure>
-                            <i class="fa-regular fa-heart"></i>
-                            <img src="https://picsum.photos/id/177/400/400" alt="Lignende produkter">
+                            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt" itemprop="image">
                             <figcaption>
-                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
-                                <p>★★★★☆ 842 Reviews</p>
+                                <a href="product.html" itemprop="url">
+                                    <strong itemprop="name">Product name</strong>
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <span itemprop="priceCurrency" content="NOK">kr</span>
+                                        <span itemprop="price">1999</span> 
+                                    </span>
+                                </a>
+                                <p>
+                                    <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                        <span itemprop="ratingValue">★★★★☆ </span>
+                                        <span itemprop="reviewCount">842</span> 
+                                        Reviews
+                                    </span>
+                                </p>
                             </figcaption>
                         </figure>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <figure>
-                            <i class="fa-regular fa-heart"></i>
-                            <img src="https://picsum.photos/id/177/400/400" alt="Lignende produkter">
+                            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt" itemprop="image">
                             <figcaption>
-                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
-                                <p>★★★★☆ 842 Reviews</p>
+                                <a href="product.html" itemprop="url">
+                                    <strong itemprop="name">Product name</strong>
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <span itemprop="priceCurrency" content="NOK">kr</span>
+                                        <span itemprop="price">1999</span> 
+                                    </span>
+                                </a>
+                                <p>
+                                    <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                        <span itemprop="ratingValue">★★★★☆ </span>
+                                        <span itemprop="reviewCount">842</span> 
+                                        Reviews
+                                    </span>
+                                </p>
                             </figcaption>
                         </figure>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <figure>
-                            <i class="fa-regular fa-heart"></i>
-                            <img src="https://picsum.photos/id/177/400/400" alt="Lignende produkter">
+                            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt" itemprop="image">
                             <figcaption>
-                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
-                                <p>★★★★☆ 842 Reviews</p>
+                                <a href="product.html" itemprop="url">
+                                    <strong itemprop="name">Product name</strong>
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <span itemprop="priceCurrency" content="NOK">kr</span>
+                                        <span itemprop="price">1999</span> 
+                                    </span>
+                                </a>
+                                <p>
+                                    <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                        <span itemprop="ratingValue">★★★★☆ </span>
+                                        <span itemprop="reviewCount">842</span> 
+                                        Reviews
+                                    </span>
+                                </p>
                             </figcaption>
                         </figure>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <figure>
-                            <i class="fa-regular fa-heart"></i>
-                            <img src="https://picsum.photos/id/177/400/400" alt="Lignende produkter">
+                            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                            <img src="https://picsum.photos/id/177/400/400" alt="Populært produkt" itemprop="image">
                             <figcaption>
-                                <a href="product.html"><strong>Product name</strong>Kr 1999</a>
-                                <p>★★★★☆ 842 Reviews</p>
+                                <a href="product.html" itemprop="url">
+                                    <strong itemprop="name">Product name</strong>
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <span itemprop="priceCurrency" content="NOK">kr</span>
+                                        <span itemprop="price">1999</span> 
+                                    </span>
+                                </a>
+                                <p>
+                                    <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                        <span itemprop="ratingValue">★★★★☆ </span>
+                                        <span itemprop="reviewCount">842</span> 
+                                        Reviews
+                                    </span>
+                                </p>
                             </figcaption>
                         </figure>
                     </article>
@@ -339,6 +400,8 @@
             <div id="bunn-container">
                 <section id="contacts" itemscope itemtype="https://schema.org/Organization">
                     <h3>KONTAKT</h3>
+                    <meta itemprop="name" content="Eksamen oppgave">
+                    <meta itemprop="image" content="https://picsum.photos/id/237/100/100">
                     <ul>
                         <li>
                             <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
