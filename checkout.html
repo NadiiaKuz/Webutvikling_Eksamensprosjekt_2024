@@ -22,7 +22,7 @@
 
         <link rel="stylesheet" href="css/main.css">
         
-        <title>Eksamen | Forside</title>
+        <title>Eksamen | Kasseside</title>
     </head>
     <body>
         <a href="#checkout-main" class="skip-to-content" aria-label="Hopp til hovedinnhold">Hopp til innhold</a>
@@ -37,7 +37,7 @@
             <nav class="meny" itemscope itemtype="https://schema.org/SiteNavigationElement" aria-label="Hovedmeny">
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
-                    <li><a href="index.html#popular-products">Produkter</a></li>
+                    <li><a href="index.html#products">Produkter</a></li>
                     <li class="logo"><a href="index.html"><h1>Logo</h1></a></li>
                     <li><a href="index.html#category-container">Kategorier</a></li>
                     <li><a href="#contacts">Kontakt oss</a></li>
@@ -162,23 +162,23 @@
                         <legend>Leveringsadresse</legend>
                         <label id="fornavn">
                             Fornavn
-                            <input type="text" name="fornavn" placeholder="Nora*" maxlength="45" itemprop="givenName" required>
+                            <input type="text" name="fornavn" placeholder="Nora*" maxlength="45" itemprop="givenName" required aria-required="true">
                         </label>
                         <label id="etternavn">
                             Etternavn
-                            <input type="text" name="etternavn" placeholder="Nordman*" maxlength="45" itemprop="familyName" required>
+                            <input type="text" name="etternavn" placeholder="Nordman*" maxlength="45" itemprop="familyName" required aria-required="true">
                         </label>
                         <label id="gateadresse">
                             Gateadresse
-                            <input type="text" name="gateadresse" placeholder="BRA veien 4*" itemprop="address" required>
+                            <input type="text" name="gateadresse" placeholder="BRA veien 4*" itemprop="address" required aria-required="true">
                         </label>
                         <label id="postnummer">
                             Postnummer
-                            <input type="number" name="postnummer" placeholder="1752*" min="0" required>
+                            <input type="number" name="postnummer" placeholder="1752*" min="0" required aria-required="true">
                         </label>
                         <label id="poststed">
                             Poststed
-                            <input type="text" name="poststed" placeholder="Halden*" required>
+                            <input type="text" name="poststed" placeholder="Halden*" required aria-required="true">
                         </label>  
                     </fieldset>
 
@@ -186,16 +186,16 @@
                         <legend>Kontaktinformasjon</legend>
                         <label>
                             E-post
-                            <input type="email" id="email" name="email" placeholder="Noranordman@hiof.no.*" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                            <input type="email" id="email" name="email" placeholder="Noranordman@hiof.no.*" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required aria-required="true">
                         </label>
                         <label>
                             Telefon
-                            <input type="tel" id="telefon" name="telefon" placeholder="+4749***018" pattern="\+47\d{8}" required>
+                            <input type="tel" id="telefon" name="telefon" placeholder="+4749***018" pattern="\+47\d{8}" required aria-required="true">
                         </label>
                     </fieldset>
                     <footer>
-                        <button type="submit">Lagre</button>
-                        <a href="#">Avbryt</a>
+                        <button type="submit" aria-label="Lagre opplysninger">Lagre</button>
+                        <a href="#" aria-label="Avbryt opplysninger">Avbryt</a>
                     </footer>
                 </form>
             </section>
@@ -253,22 +253,22 @@
                         <legend>BETAL MED KORT <i class="fa-solid fa-credit-card"></i></legend>
                         <label id="card-number">
                             Kortnummer
-                            <input type="text" name="card-number" placeholder="342342****4435" pattern="\d{16}" maxlength="16" inputmode="numeric" required>
+                            <input type="text" name="card-number" placeholder="342342****4435" pattern="\d{16}" maxlength="16" inputmode="numeric" required aria-required="true">
                         </label>
                         <label id="expiry-date">
                             Utløpsdato
-                            <input type="text" name="expiry-date" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/\d{2}$" maxlength="5" required>
+                            <input type="text" name="expiry-date" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/\d{2}$" maxlength="5" required aria-required="true">
                         </label>
                         <label id="cvc">
                             CVC/CVV
-                            <input type="text" name="cvc" placeholder="CVC/CVV" pattern="\d{3}" maxlength="3" inputmode="numeric" required>
+                            <input type="text" name="cvc" placeholder="CVC/CVV" pattern="\d{3}" maxlength="3" inputmode="numeric" required aria-required="true">
                         </label>
                     </fieldset>
                     <section id="price">
                         <p>Å betale inkl. mva.</p>
                         <strong>1 199 kr</strong>
                     </section>
-                    <button type="submit">Fullfør kjøp</button>
+                    <button type="submit" aria-label="Fullfør kjøp">Fullfør kjøp</button>
                 </form>
                 <p>
                     Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.
@@ -322,8 +322,8 @@
                 <section>
                     <h3>SNARVEIER</h3>
                     <ul>
-                        <li><a href="#products">Produkter</a></li>
-                        <li><a href="#category">Kategorier</a></li>
+                        <li><a href="index.html#products">Produkter</a></li>
+                        <li><a href="index.html#category-container">Kategorier</a></li>
                         <li><a href="#bunn">Kontakt oss</a></li>
                     </ul>
                 </section>

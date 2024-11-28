@@ -308,16 +308,20 @@ body {
 #product-page-container #product-information-right form {
   margin-top: 2rem;
 }
-#product-page-container #product-information-right form label {
-  display: none;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+#product-page-container #product-information-right form .visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 #product-page-container #product-information-right form select {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid rgba(160, 160, 160, 0.7);
-  border-radius: 4px;
   font-size: 1rem;
   margin-bottom: 1rem;
 }
@@ -1028,7 +1032,7 @@ body {
     color: #fff;
   }
   .back-to-top {
-    right: calc((100% - 1200px) / 2 + 20px);
+    right: 12.2%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {

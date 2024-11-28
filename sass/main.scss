@@ -359,17 +359,21 @@ body{
         form {
             margin-top: 2rem;
     
-            label {
-                display: none;
-                font-size: 1rem;
-                margin-bottom: 0.5rem;
-            }
+            .visuallyhidden {
+                border: 0;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+              }
     
             select {
                 width: 100%;
                 padding: 0.5rem;
                 border: 1px solid $border;
-                border-radius: 4px;
                 font-size: 1rem;
                 margin-bottom: 1rem;
             }
@@ -873,6 +877,7 @@ body{
     font-size: 1rem;
     text-decoration: none;
 }
+
 
 @media only screen and (min-width: 1024px){
     @include full-size;
